@@ -13,6 +13,13 @@ const config: Config = {
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
+      colors:{
+        "nanando-black": "#0a0a0a",
+        "dark-grey": "#171717",
+        "nanando-grey": "#525252",
+        "nanando-white": "#fafafa",
+        "nanando-soft-grey": "#232323",
+      }
     },
   },
   plugins: [],
