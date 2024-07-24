@@ -45,21 +45,26 @@ export default function Home() {
                  alt="" />
         </div>
         <div className='flex flex-1 items-start justify-center flex-col gap-[30px]'>
-        <div className='flex items-start justify-center flex-col'>
-            <span className={`${PoppinsSemiBold.className} text-[28px]`}>ABOUT ME</span>
-            <span>WHO AM I</span>
+          <div className='flex items-start justify-center flex-col'>
+            <span className={`${PoppinsSemiBold.className} text-[32px]`}>ABOUT ME</span>
+            <div className='flex w-full gap-[10px]'>
+              <div className='flex flex-1 items-center justify-between'>
+                <hr className='flex flex-1 bg-nanando-white h-[3px]'></hr>
+              </div>              
+              <span className='flex flex-1 text-[14px] text-reniala-red'>WHO AM I</span>
+            </div>
           </div>
           <p className='max-w-[450px]'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
           <div className='flex items-start justify-center gap-[30px]'>
             <button
               type="button"
-              className="inline-block rounded px-6 pb-2 pt-2.5 text-xs uppercase text-white bg-dark-grey"
+              className="inline-block rounded px-6 py-[15px] text-xs uppercase text-white bg-reniala-red"
             >
               Download resume
             </button>
             <button
               type="button"
-              className="inline-block rounded px-6 pb-2 pt-2.5 text-xs uppercase text-white bg-dark-grey"
+              className="inline-block rounded px-6 py-[15px] text-xs uppercase text-white bg-reniala-red"
             >
               Contact me
             </button>
