@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import 'rsuite/dist/rsuite.min.css';
 import "./globals.css";
 import { Poppins } from "./ui/font";
 

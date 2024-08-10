@@ -4,6 +4,8 @@ import { Lora, ArchivoBlack, PoppinsSemiBold, PoppinsBold, Poppins } from "./ui/
 import Navigation from './ui/components/navigation'
 import SocialLinks from './ui/components/socialLinks';
 import Image from 'next/image';
+import { Slider } from 'rsuite';
+
 config.autoAddCss = false
 
 export default function Home() {
@@ -68,6 +70,122 @@ export default function Home() {
             >
               Contact me
             </button>
+          </div>
+        </div>
+      </div>
+      <div className='flex flex-1 items-center justify-center flex-col gap-[30px]'>
+        <div className='flex items-center justify-center flex-col'>
+          <span className={`${PoppinsSemiBold.className} text-[32px]`}>EXPERIENCE</span>
+        </div>
+        <div>
+          <div className='flex items-center justify-center flex-col px-36'>
+            <div className='relative flex self-end justify-self-end flex-col w-1/2 gap-[20px] px-14 border-l border-solid pb-14'>
+              <div className='flex flex-col'>
+                <span>2010 - 2020</span>
+                <span>Developer java</span>
+              </div>
+              <div className='pb-10'>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas euismod fermentum augue, eget porttitor augue rutrum id. Praesent tincidunt placerat augue nec accumsan. Sed a euismod eros.
+              </div>
+            <div className='absolute -left-6 p-3 border border-solid rotate-45 bg-[#000]'>
+              <Image src={"/camera.png"}
+                    width={25}
+                    height={25}
+                    alt=""
+                    className='relative -rotate-45'  />
+            </div>
+            </div>
+          </div>
+          <div className='flex items-center justify-center flex-col px-36'>
+            <div className='relative flex self-start justify-self-start flex-col w-1/2 gap-[20px] px-14 border-r border-solid pb-14'>
+              <div className='flex flex-col items-end'>
+                <span>2010 - 2020</span>
+                <span>Developer java</span>
+              </div>
+              <div className='pb-10 flex justify-end text-right'>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas euismod fermentum augue, eget porttitor augue rutrum id. Praesent tincidunt placerat augue nec accumsan. Sed a euismod eros.
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas euismod fermentum augue, eget porttitor augue rutrum id. Praesent tincidunt placerat augue nec accumsan. Sed a euismod eros.
+              </div>
+            <div className='absolute -right-6 p-3 border border-solid rotate-45 bg-[#000]'>
+              <Image src={"/camera.png"}
+                    width={25}
+                    height={25}
+                    alt=""
+                    className='relative -rotate-45'  />
+            </div>
+            </div>
+        </div>
+          <div className='flex items-center justify-center flex-col px-36'>
+            <div className='relative flex self-end justify-self-end flex-col w-1/2 gap-[20px] px-14 border-l border-solid pb-14'>
+              <div className='flex flex-col'>
+                <span>2010 - 2020</span>
+                <span>Developer java</span>
+              </div>
+              <div className='pb-10'>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas euismod fermentum augue, eget porttitor augue rutrum id. Praesent tincidunt placerat augue nec accumsan. Sed a euismod eros.
+              </div>
+            <div className='absolute -left-6 p-3 border border-solid rotate-45 bg-[#000]'>
+              <Image src={"/camera.png"}
+                    width={25}
+                    height={25}
+                    alt=""
+                    className='relative -rotate-45'  />
+            </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className='flex flex-1 items-center justify-center flex-col gap-[30px] px-36 py-14'>
+        <div className='flex items-center justify-center flex-col'>
+          <span className={`${PoppinsSemiBold.className} text-[32px]`}>FORMATION</span>
+        </div>
+        <div className='flex justify-between w-full'>
+          <div className='flex flex-1 flex-col'>
+            <span>Experience</span>
+            <span className={`${PoppinsSemiBold.className} text-[24px]`}>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>
+          </div>
+          <div className='flex flex-1 flex-col'>
+            <div className='relative flex flex-col px-4 border-l border-solid pb-8'>
+              <span className={`${PoppinsSemiBold.className}`}>Master</span>
+              <span className={`${Lora.className} text-[12px]`}>ESTIA</span>
+              <div className='absolute -left-4 p-3 border border-solid rotate-45 bg-[#fff] rounded-full'>
+              </div>              
+            </div>
+            <div className='relative flex flex-col px-4 border-l border-solid pb-8'>
+              <span className={`${PoppinsSemiBold.className}`}>Master</span>
+              <span className={`${Lora.className} text-[12px]`}>ESTIA</span>
+              <div className='absolute -left-4 p-3 border border-solid rotate-45 bg-[#fff] rounded-full'>
+              </div>              
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className='flex flex-1 items-center justify-center flex-col gap-[30px] mx-36 py-14'>
+        <div className='relative flex items-center justify-center flex-col gap-4'>
+          <span className={`${PoppinsSemiBold.className} text-[32px]`}>My skills</span>
+          <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>
+          <span className={`${PoppinsBold.className} text-[78px] absolute text-nanando-soft-grey z-[-1]`}>Skills</span>
+        </div>
+        <div className='relative flex item-between justify-between w-full'>
+          <div className='absolute flex item-between justify-between w-full gap-14'>
+            <div className='flex item-between justify-between flex-col w-2/4'>
+              <div className='flex item-between justify-between'>
+                <span>Php</span>
+                <span>90%</span>
+              </div> 
+              <div>
+                <progress value={75} max={100} className='w-full'/>
+              </div> 
+            </div>
+            <div className='flex item-between justify-between flex-col w-2/4'>
+              <div className='flex item-between justify-between'>
+                <span>Php</span>
+                <span>90%</span>
+              </div> 
+              <div>
+                <progress value={75} max={100} className='w-full'/>
+              </div> 
+            </div>
           </div>
         </div>
       </div>
