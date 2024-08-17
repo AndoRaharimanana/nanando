@@ -7,6 +7,7 @@ import SocialLinks from './ui/components/socialLinks';
 import Image from 'next/image';
 import { Slider } from 'rsuite';
 import React, {useState} from 'react';
+import Chronologie from './ui/components/chronologie/chronologie';
 
 config.autoAddCss = false
 
@@ -79,68 +80,7 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div className='flex flex-1 items-center justify-center flex-col gap-[30px]' id="experience">
-        <div className='flex items-center justify-center flex-col'>
-          <span className={`${PoppinsSemiBold.className} text-[32px]`}>EXPERIENCE</span>
-        </div>
-        <div>
-          <div className='flex items-center justify-center flex-col px-36'>
-            <div className='relative flex self-end justify-self-end flex-col w-1/2 gap-[20px] px-14 border-l border-solid pb-14'>
-              <div className='flex flex-col'>
-                <span>2010 - 2020</span>
-                <span>Developer java</span>
-              </div>
-              <div className='pb-10'>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas euismod fermentum augue, eget porttitor augue rutrum id. Praesent tincidunt placerat augue nec accumsan. Sed a euismod eros.
-              </div>
-            <div className='absolute -left-6 p-3 border border-solid rotate-45 bg-[#000]'>
-              <Image src={"/camera.png"}
-                    width={25}
-                    height={25}
-                    alt=""
-                    className='relative -rotate-45'  />
-            </div>
-            </div>
-          </div>
-          <div className='flex items-center justify-center flex-col px-36'>
-            <div className='relative flex self-start justify-self-start flex-col w-1/2 gap-[20px] px-14 border-r border-solid pb-14'>
-              <div className='flex flex-col items-end'>
-                <span>2010 - 2020</span>
-                <span>Developer java</span>
-              </div>
-              <div className='pb-10 flex justify-end text-right'>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas euismod fermentum augue, eget porttitor augue rutrum id. Praesent tincidunt placerat augue nec accumsan. Sed a euismod eros.
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas euismod fermentum augue, eget porttitor augue rutrum id. Praesent tincidunt placerat augue nec accumsan. Sed a euismod eros.
-              </div>
-            <div className='absolute -right-6 p-3 border border-solid rotate-45 bg-[#000]'>
-              <Image src={"/camera.png"}
-                    width={25}
-                    height={25}
-                    alt=""
-                    className='relative -rotate-45'  />
-            </div>
-            </div>
-        </div>
-          <div className='flex items-center justify-center flex-col px-36'>
-            <div className='relative flex self-end justify-self-end flex-col w-1/2 gap-[20px] px-14 border-l border-solid pb-14'>
-              <div className='flex flex-col'>
-                <span>2010 - 2020</span>
-                <span>Developer java</span>
-              </div>
-              <div className='pb-10'>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas euismod fermentum augue, eget porttitor augue rutrum id. Praesent tincidunt placerat augue nec accumsan. Sed a euismod eros.
-              </div>
-            <div className='absolute -left-6 p-3 border border-solid rotate-45 bg-[#000]'>
-              <Image src={"/camera.png"}
-                    width={25}
-                    height={25}
-                    alt=""
-                    className='relative -rotate-45'  />
-            </div>
-            </div>
-          </div>
-        </div>
-      </div>
+      <Chronologie />
       <div className='flex flex-1 items-center justify-center flex-col gap-[30px] px-36 py-14' id="formation">
         <div className='flex items-center justify-center flex-col'>
           <span className={`${PoppinsSemiBold.className} text-[32px]`}>FORMATION</span>
