@@ -26,6 +26,26 @@ body {
     rgb(var(--background-start-rgb));
 }
 
+.rs-slider-handle:before{
+  background-image: url('/left-right-solid.svg');
+  background-size: cover;
+  width: 30px;
+  height: 30px;
+  border: none;
+  border-radius: 0%;
+  background-color: transparent;
+  margin-left: -14px;
+}
+
+.rs-slider-handle:focus:before, .rs-slider-handle:hover:before {
+  -webkit-box-shadow: inherit
+}
+
+.rs-slider-bar, .rs-slider:hover .rs-slider-bar {
+  cursor: unset !important;
+  background-color: transparent !important;
+}
+
 @layer utilities {
   .text-balance {
     text-wrap: balance;

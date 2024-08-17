@@ -20,6 +20,7 @@ const config: Config = {
         "nanando-white": "#fafafa",
         "nanando-soft-grey": "#232323",
         "reniala-red": "#E5342A",
+        "transparent": "transparent",
       }
     },
   },

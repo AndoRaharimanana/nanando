@@ -1,3 +1,4 @@
+'use client'
 import { config } from '@fortawesome/fontawesome-svg-core'
 import Banner from './ui/components/banner'
 import { Lora, ArchivoBlack, PoppinsSemiBold, PoppinsBold, Poppins } from "./ui/font";
@@ -5,13 +6,18 @@ import Navigation from './ui/components/navigation'
 import SocialLinks from './ui/components/socialLinks';
 import Image from 'next/image';
 import { Slider } from 'rsuite';
+import React, {useState} from 'react';
 
 config.autoAddCss = false
 
 export default function Home() {
+  const [value, setValue] = useState(0);
+  const changeData = (value: number) => {
+    setValue(value);
+  };
   return (
     <main>
-      <div className="flex min-h-screen flex-col items-center justify-between">
+      <div className="flex min-h-screen flex-col items-center justify-between" id="home">
         <Banner />
         <div className="flex bg-transparent min-h-screen w-full g-[5px] py-[25px] absolute">
           <div className="flex flex-[2] justify-between items-end min-h-full">        
@@ -39,7 +45,7 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div className="flex items-center justify-between gap-[50px] py-[75px]">
+      <div className="flex items-center justify-between gap-[50px] py-[75px]" id="about">
         <div className='flex flex-1 items-center justify-end'>
           <Image src={"/guy-plaid-shirt.png"}
                  width={300}
@@ -73,7 +79,7 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div className='flex flex-1 items-center justify-center flex-col gap-[30px]'>
+      <div className='flex flex-1 items-center justify-center flex-col gap-[30px]' id="experience">
         <div className='flex items-center justify-center flex-col'>
           <span className={`${PoppinsSemiBold.className} text-[32px]`}>EXPERIENCE</span>
         </div>
@@ -135,7 +141,7 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div className='flex flex-1 items-center justify-center flex-col gap-[30px] px-36 py-14'>
+      <div className='flex flex-1 items-center justify-center flex-col gap-[30px] px-36 py-14' id="formation">
         <div className='flex items-center justify-center flex-col'>
           <span className={`${PoppinsSemiBold.className} text-[32px]`}>FORMATION</span>
         </div>
@@ -160,15 +166,15 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div className='flex flex-1 items-center justify-center flex-col gap-[30px] mx-36 py-14'>
+      <div className='flex flex-1 items-center justify-center flex-col gap-[30px] mx-36 py-14' id="skills">
         <div className='relative flex items-center justify-center flex-col gap-4'>
           <span className={`${PoppinsSemiBold.className} text-[32px]`}>My skills</span>
           <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>
           <span className={`${PoppinsBold.className} text-[78px] absolute text-nanando-soft-grey z-[-1]`}>Skills</span>
         </div>
-        <div className='relative flex item-between justify-between w-full'>
-          <div className='absolute flex item-between justify-between w-full gap-14'>
-            <div className='flex item-between justify-between flex-col w-2/4'>
+        <div className='relative flex item-between justify-between w-full h-[120px]'>
+          <div className='absolute flex item-between justify-between w-full gap-x-14 gap-y-8 flex-wrap bg-nanando-white text-nanando-black' style={{clipPath: 'polygon(0 0, '+value+'% 0, '+value+'% 100%, 0 100%)'}}>
+            <div className='flex item-between justify-between flex-col w-2/5 px-8'>
               <div className='flex item-between justify-between'>
                 <span>Php</span>
                 <span>90%</span>
@@ -177,7 +183,7 @@ export default function Home() {
                 <progress value={75} max={100} className='w-full'/>
               </div> 
             </div>
-            <div className='flex item-between justify-between flex-col w-2/4'>
+            <div className='flex item-between justify-between flex-col w-2/5 px-8'>
               <div className='flex item-between justify-between'>
                 <span>Php</span>
                 <span>90%</span>
@@ -186,6 +192,67 @@ export default function Home() {
                 <progress value={75} max={100} className='w-full'/>
               </div> 
             </div>
+            <div className='flex item-between justify-between flex-col w-2/5 px-8'>
+              <div className='flex item-between justify-between'>
+                <span>Php</span>
+                <span>90%</span>
+              </div> 
+              <div>
+                <progress value={75} max={100} className='w-full'/>
+              </div> 
+            </div>
+            <div className='flex item-between justify-between flex-col w-2/5 px-8'>
+              <div className='flex item-between justify-between'>
+                <span>Php</span>
+                <span>90%</span>
+              </div> 
+              <div>
+                <progress value={75} max={100} className='w-full'/>
+              </div> 
+            </div>
+            <span className={`${PoppinsBold.className} text-[48px] absolute top-1/2 left-1/2 text-nanando-soft-grey -translate-y-1/2 -translate-x-1/2`}>Back-end</span>
+          </div>
+          <div className='absolute flex item-between justify-between w-full gap-x-14 gap-y-8 flex-wrap' style={{clipPath: 'polygon('+value+'% 0, 100% 0, 100% 100%, '+value+'% 100%)'}}>
+            <div className='flex item-between justify-between flex-col w-2/5 px-8'>
+              <div className='flex item-between justify-between'>
+                <span>React</span>
+                <span>90%</span>
+              </div> 
+              <div>
+                <progress value={75} max={100} className='w-full'/>
+              </div> 
+            </div>
+            <div className='flex item-between justify-between flex-col w-2/5 px-8'>
+              <div className='flex item-between justify-between'>
+                <span>React</span>
+                <span>90%</span>
+              </div> 
+              <div>
+                <progress value={75} max={100} className='w-full'/>
+              </div> 
+            </div>
+            <div className='flex item-between justify-between flex-col w-2/5 px-8'>
+              <div className='flex item-between justify-between'>
+                <span>React</span>
+                <span>90%</span>
+              </div> 
+              <div>
+                <progress value={75} max={100} className='w-full'/>
+              </div> 
+            </div>
+            <div className='flex item-between justify-between flex-col w-2/5 px-8'>
+              <div className='flex item-between justify-between'>
+                <span>React</span>
+                <span>90%</span>
+              </div> 
+              <div>
+                <progress value={75} max={100} className='w-full'/>
+              </div> 
+            </div>
+            <span className={`${PoppinsBold.className} text-[48px] absolute top-1/2 left-1/2 text-nanando-soft-grey -translate-y-1/2 -translate-x-1/2`}>Front-end</span>
+          </div>
+          <div className='w-full absolute top-1/2'>
+            <Slider onChange={changeData} tooltip={false} />
           </div>
         </div>
       </div>
