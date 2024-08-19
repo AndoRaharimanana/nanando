@@ -8,6 +8,8 @@ import Image from 'next/image';
 import { Slider } from 'rsuite';
 import React, {useState} from 'react';
 import Chronologie from './ui/components/chronologie/chronologie';
+import Formation from './ui/components/formation/formation';
+import CustomSlider from './ui/components/customSlider/customSlider';
 
 config.autoAddCss = false
 
@@ -81,121 +83,8 @@ export default function Home() {
         </div>
       </div>
       <Chronologie />
-      <div className='flex flex-1 items-center justify-center flex-col gap-[30px] px-36 py-14' id="formation">
-        <div className='flex items-center justify-center flex-col'>
-          <span className={`${PoppinsSemiBold.className} text-[32px]`}>FORMATION</span>
-        </div>
-        <div className='flex justify-between w-full'>
-          <div className='flex flex-1 flex-col'>
-            <span>Experience</span>
-            <span className={`${PoppinsSemiBold.className} text-[24px]`}>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>
-          </div>
-          <div className='flex flex-1 flex-col'>
-            <div className='relative flex flex-col px-4 border-l border-solid pb-8'>
-              <span className={`${PoppinsSemiBold.className}`}>Master</span>
-              <span className={`${Lora.className} text-[12px]`}>ESTIA</span>
-              <div className='absolute -left-4 p-3 border border-solid rotate-45 bg-[#fff] rounded-full'>
-              </div>              
-            </div>
-            <div className='relative flex flex-col px-4 border-l border-solid pb-8'>
-              <span className={`${PoppinsSemiBold.className}`}>Master</span>
-              <span className={`${Lora.className} text-[12px]`}>ESTIA</span>
-              <div className='absolute -left-4 p-3 border border-solid rotate-45 bg-[#fff] rounded-full'>
-              </div>              
-            </div>
-          </div>
-        </div>
-      </div>
-      <div className='flex flex-1 items-center justify-center flex-col gap-[30px] mx-36 py-14' id="skills">
-        <div className='relative flex items-center justify-center flex-col gap-4'>
-          <span className={`${PoppinsSemiBold.className} text-[32px]`}>My skills</span>
-          <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>
-          <span className={`${PoppinsBold.className} text-[78px] absolute text-nanando-soft-grey z-[-1]`}>Skills</span>
-        </div>
-        <div className='relative flex item-between justify-between w-full h-[120px]'>
-          <div className='absolute flex item-between justify-between w-full gap-x-14 gap-y-8 flex-wrap bg-nanando-white text-nanando-black' style={{clipPath: 'polygon(0 0, '+value+'% 0, '+value+'% 100%, 0 100%)'}}>
-            <div className='flex item-between justify-between flex-col w-2/5 px-8'>
-              <div className='flex item-between justify-between'>
-                <span>Php</span>
-                <span>90%</span>
-              </div> 
-              <div>
-                <progress value={75} max={100} className='w-full'/>
-              </div> 
-            </div>
-            <div className='flex item-between justify-between flex-col w-2/5 px-8'>
-              <div className='flex item-between justify-between'>
-                <span>Php</span>
-                <span>90%</span>
-              </div> 
-              <div>
-                <progress value={75} max={100} className='w-full'/>
-              </div> 
-            </div>
-            <div className='flex item-between justify-between flex-col w-2/5 px-8'>
-              <div className='flex item-between justify-between'>
-                <span>Php</span>
-                <span>90%</span>
-              </div> 
-              <div>
-                <progress value={75} max={100} className='w-full'/>
-              </div> 
-            </div>
-            <div className='flex item-between justify-between flex-col w-2/5 px-8'>
-              <div className='flex item-between justify-between'>
-                <span>Php</span>
-                <span>90%</span>
-              </div> 
-              <div>
-                <progress value={75} max={100} className='w-full'/>
-              </div> 
-            </div>
-            <span className={`${PoppinsBold.className} text-[48px] absolute top-1/2 left-1/2 text-nanando-soft-grey -translate-y-1/2 -translate-x-1/2`}>Back-end</span>
-          </div>
-          <div className='absolute flex item-between justify-between w-full gap-x-14 gap-y-8 flex-wrap' style={{clipPath: 'polygon('+value+'% 0, 100% 0, 100% 100%, '+value+'% 100%)'}}>
-            <div className='flex item-between justify-between flex-col w-2/5 px-8'>
-              <div className='flex item-between justify-between'>
-                <span>React</span>
-                <span>90%</span>
-              </div> 
-              <div>
-                <progress value={75} max={100} className='w-full'/>
-              </div> 
-            </div>
-            <div className='flex item-between justify-between flex-col w-2/5 px-8'>
-              <div className='flex item-between justify-between'>
-                <span>React</span>
-                <span>90%</span>
-              </div> 
-              <div>
-                <progress value={75} max={100} className='w-full'/>
-              </div> 
-            </div>
-            <div className='flex item-between justify-between flex-col w-2/5 px-8'>
-              <div className='flex item-between justify-between'>
-                <span>React</span>
-                <span>90%</span>
-              </div> 
-              <div>
-                <progress value={75} max={100} className='w-full'/>
-              </div> 
-            </div>
-            <div className='flex item-between justify-between flex-col w-2/5 px-8'>
-              <div className='flex item-between justify-between'>
-                <span>React</span>
-                <span>90%</span>
-              </div> 
-              <div>
-                <progress value={75} max={100} className='w-full'/>
-              </div> 
-            </div>
-            <span className={`${PoppinsBold.className} text-[48px] absolute top-1/2 left-1/2 text-nanando-soft-grey -translate-y-1/2 -translate-x-1/2`}>Front-end</span>
-          </div>
-          <div className='w-full absolute top-1/2'>
-            <Slider onChange={changeData} tooltip={false} />
-          </div>
-        </div>
-      </div>
+      <Formation />
+      <CustomSlider value={value} changeData={changeData}/>
     </main>
   );
 }
