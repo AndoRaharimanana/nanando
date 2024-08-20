@@ -26,20 +26,20 @@ export default function Home() {
           <div className="flex flex-[2] justify-between items-end min-h-full">        
             <SocialLinks />
           </div>
-          <div className="flex flex-[4] justify-between items-center min-h-full">
+          <div className="relative flex flex-[4] justify-between items-center min-h-full">
             <div className="flex justify-start items-start">
               <div className={`rotate-180 ${Lora.className} [writing-mode:vertical-lr] [text-orientation: mixed] max-h-[180px] z-[2]`}>
                 Fullstack developer Symfony/React Native
               </div>
-              <div className="absolute max-w-[920px] bottom-[85px] z-[1]">
-                <span className={`${ArchivoBlack.className} leading-none break-words text-nanando-soft-grey text-[225px]`}>
-                  FULL STACK
-                </span>
-              </div>
             </div>
-            <div className='max-w-[348px] z-[2]'>
-              <span className={`${PoppinsSemiBold.className} leading-none text-[125px]`}>
+            <div className='md:max-w-[225px] lg:max-w-[348px] z-[2]'>
+              <span className={`${PoppinsSemiBold.className} leading-none md:text-[85px] lg:text-[125px]`}>
                 Hello I am Ando
+              </span>
+            </div>
+            <div className="absolute max-w-[920px] z-[1]">
+              <span className={`${ArchivoBlack.className} leading-none break-words text-nanando-soft-grey md:text-[125px] lg:text-[225px]`}>
+                FULL STACK
               </span>
             </div>
           </div>
