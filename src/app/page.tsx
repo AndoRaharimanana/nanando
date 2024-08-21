@@ -55,7 +55,7 @@ export default function Home() {
                  height={300}
                  alt="" />
         </div>
-        <div className='flex flex-1 items-start justify-center flex-col gap-[30px]'>
+        <div className='flex flex-1 items-center md:items-start justify-center flex-col gap-[30px]'>
           <div className='flex items-start justify-center flex-col'>
             <span className={`${PoppinsSemiBold.className} text-[32px]`}>ABOUT ME</span>
             <div className='flex w-full gap-[10px]'>
