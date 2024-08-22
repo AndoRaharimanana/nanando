@@ -15,7 +15,7 @@ type CustomSliderProps = {
 
 function Skills({ data }: {data: any}) {
   return (
-    <div className='flex item-between justify-between flex-col w-2/5 px-8'>
+    <div className='flex item-between justify-between flex-col w-full md:w-2/5 px-4 lg:px-8'>
       <div className='flex item-between justify-between'>
         <span>{data.name}</span>
         <span>{data.value}%</span>
@@ -30,10 +30,10 @@ function Skills({ data }: {data: any}) {
 function Item({ name, value, side, data }: ItemProps) {
     return (
       <div className={`absolute flex item-between justify-between w-full gap-x-14 gap-y-8 flex-wrap ${side == 'right' ? '' : 'bg-nanando-white text-nanando-black' }`} style={{clipPath: side == 'right' ? 'polygon('+value+'% 0, 100% 0, 100% 100%, '+value+'% 100%)' : 'polygon(0 0, '+value+'% 0, '+value+'% 100%, 0 100%)'}}>
+        <span className={`${PoppinsBold.className} text-[32px] w-full text-center md:text-[48px] md:absolute md:top-1/2 md:left-1/2 text-nanando-soft-grey md:-translate-y-1/2 md:-translate-x-1/2 -z-10 `}>{name}</span>
         {
           data.map((skill) => <Skills key={skill.name} data={skill} />)
         }
-        <span className={`${PoppinsBold.className} text-[48px] absolute top-1/2 left-1/2 text-nanando-soft-grey -translate-y-1/2 -translate-x-1/2`}>{name}</span>
       </div>
     );
 }
@@ -77,10 +77,10 @@ export default function CustomSlider({ value, changeData }: CustomSliderProps) {
     ]
 
     return (
-      <div className='flex flex-1 items-center justify-center flex-col gap-[30px] mx-36 py-14' id="skills">
+      <div className='flex flex-1 items-center justify-center flex-col gap-[30px] mx-14 lg:mx-36 py-14' id="skills">
         <div className='relative flex items-center justify-center flex-col gap-4'>
           <span className={`${PoppinsSemiBold.className} text-[32px]`}>My skills</span>
-          <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>
+          <span className="text-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>
           <span className={`${PoppinsBold.className} text-[78px] absolute text-nanando-soft-grey z-[-1]`}>Skills</span>
         </div>
         <div className='relative flex item-between justify-between w-full h-[120px]'>
