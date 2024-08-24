@@ -14,7 +14,7 @@ import CustomSlider from './ui/components/customSlider/customSlider';
 config.autoAddCss = false
 
 export default function Home() {
-  const [value, setValue] = useState(0);
+  const [value, setValue] = useState(50);
   const changeData = (value: number) => {
     setValue(value);
   };
