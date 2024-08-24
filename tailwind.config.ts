@@ -21,6 +21,10 @@ const config: Config = {
         "nanando-soft-grey": "#232323",
         "reniala-red": "#E5342A",
         "transparent": "transparent",
+      },
+      spacing:{
+        "c348": "348px",
+        "c75": "75px"
       }
     },
   },

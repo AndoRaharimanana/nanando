@@ -24,7 +24,7 @@ export default function Navigation() {
     };    
     return (
         <>
-            <ul className={`rotate-180 ${Poppins.className} gap-[50px] pl-[25px] flex-row-reverse [writing-mode:vertical-lr] [text-orientation: mixed] fixed hidden lg:flex`}>
+            <ul className={`rotate-180 ${Poppins.className} gap-12 pl-6 flex-row-reverse [writing-mode:vertical-lr] [text-orientation: mixed] fixed hidden lg:flex`}>
                 <Menu />
             </ul>            
             <div className="fixed lg:hidden mx-4 z-50">
