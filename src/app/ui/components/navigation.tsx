@@ -7,12 +7,12 @@ import SocialLinks from "./socialLinks";
 function Menu() {
     return (
         <>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#experience">Experience</a></li>
-            <li><a href="#formation">Formation</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#contact">Let's talk</a></li>        
+            <li><a className='[text-shadow:0px_3px_1px_#0a0a0a]' href="#home">Home</a></li>
+            <li><a className='[text-shadow:0px_3px_1px_#0a0a0a]' href="#about">About</a></li>
+            <li><a className='[text-shadow:0px_3px_1px_#0a0a0a]' href="#experience">Experience</a></li>
+            <li><a className='[text-shadow:0px_3px_1px_#0a0a0a]' href="#formation">Formation</a></li>
+            <li><a className='[text-shadow:0px_3px_1px_#0a0a0a]' href="#skills">Skills</a></li>
+            <li><a className='[text-shadow:0px_3px_1px_#0a0a0a]' href="#contact">Let's talk</a></li>        
         </>
     );
 }
@@ -28,7 +28,7 @@ export default function Navigation() {
                 <Menu />
             </ul>            
             <div className="fixed lg:hidden mx-4 z-50">
-                <FontAwesomeIcon icon={displayMobileMenu ? faXmark : faBars} fontSize={25} onClick={clickMobileMenu}/>
+                <FontAwesomeIcon icon={displayMobileMenu ? faXmark : faBars} fontSize={25} onClick={clickMobileMenu} className="shadow shadow-nanando-black"/>
             </div>            
             <div className={`fixed ${displayMobileMenu ? '' : 'hidden'} lg:hidden w-full h-full bg-nanando-soft-grey z-40 top-0 flex items-center justify-center`}>
                 <div className="flex flex-col md:flex-row items-center justify-around gap-6 md:w-full">

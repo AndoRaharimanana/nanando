@@ -3,17 +3,17 @@ import Image from 'next/image';
 
 function Item() {
     return (
-      <div className='relative flex flex-col px-4 border-l border-solid pb-8'>
+      <div className='relative flex flex-col px-4 border-l-2 border-solid pb-8'>
         <span className={`${PoppinsSemiBold.className}`}>Master</span>
         <span className={`${Lora.className} text-xs`}>ESTIA</span>
-        <div className='absolute -left-4 p-3 border border-solid rotate-45 bg-[#fff] rounded-full'>
+        <div className='absolute -left-4 p-3 border border-solid rotate-45 bg-nanando-white rounded-full'>
         </div>              
       </div>
     );
 }
 export default function Formation() {
     return (
-      <div className='flex flex-1 items-center justify-center flex-col gap-7 px-14 lg:px-36 py-14' id="formation">
+      <div className='flex flex-1 items-center justify-center flex-col gap-7 px-14 lg:px-36 py-c75' id="formation">
         <div className='flex items-center justify-center flex-col'>
           <span className={`${PoppinsSemiBold.className} text-3xl`}>FORMATION</span>
         </div>

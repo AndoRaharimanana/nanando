@@ -46,6 +46,16 @@ body {
   background-color: transparent !important;
 }
 
+
+progress{
+  border-radius: 10px;
+  background-color: #E5342A; /* Progress bar fill color */
+}
+.progress-bar::-webkit-progress-value {
+  background-color: #E5342A; /* Progress bar fill color */
+  border-radius: 10px;
+}
+
 @layer utilities {
   .text-balance {
     text-wrap: balance;

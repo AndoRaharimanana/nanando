@@ -19,7 +19,7 @@ export default function Home() {
     setValue(value);
   };
   return (
-    <main>
+    <main className='pb-c75'>
       <div className="flex min-h-screen flex-col items-center justify-between" id="home">
         <Banner />
         <div className="flex bg-transparent min-h-screen w-full g-1 py-6 absolute">
@@ -28,17 +28,17 @@ export default function Home() {
           </div>
           <div className="relative flex flex-[4] justify-between items-center min-h-full">
             <div className="flex justify-start items-start">
-              <div className={`rotate-180 ${Lora.className} [writing-mode:vertical-lr] [text-orientation: mixed] max-h-32 md:max-h-44 z-[2] text-[8px] md:text-xs lg:text-sm`}>
+              <div className={`rotate-180 ${Lora.className} [writing-mode:vertical-lr] max-h-32 md:max-h-44 z-[2] text-[8px] md:text-xs lg:text-sm`}>
                 Fullstack developer Symfony/React Native
               </div>
             </div>
             <div className='max-w-24 md:max-w-56 lg:max-w-c348 z-[2]'>
-              <span className={`${PoppinsSemiBold.className} leading-tight md:leading-none text-4xl md:text-[85px] lg:text-9xl`}>
+              <span className={`${PoppinsSemiBold.className} leading-tight md:leading-none text-4xl md:text-[85px] lg:text-9xl [text-shadow:0px_12px_5px_#0a0a0a]`}>
                 Hello I am Ando
               </span>
             </div>
             <div className="absolute max-w-4xl z-[1] pt-9 md:pt-16 lg:pt-24">
-              <span className={`${ArchivoBlack.className} leading-tight md:leading-none break-words text-nanando-soft-grey text-6xl md:text-9xl lg:text-[225px]`}>
+              <span className={`${ArchivoBlack.className} leading-tight md:leading-none break-words text-nanando-soft-grey text-6xl md:text-9xl lg:text-[225px] [text-shadow:12px_12px_8px_#0a0a0a]`}>
                 FULL STACK
               </span>
             </div>

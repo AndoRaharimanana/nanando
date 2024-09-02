@@ -25,7 +25,7 @@ function Item({ side }: { side: string }) {
 }
 export default function Chronologie() {
     return (
-        <div className='flex flex-1 items-center justify-center flex-col gap-7' id="experience">
+        <div className='flex flex-1 items-center justify-center flex-col gap-7 py-c75' id="experience">
           <div className='flex items-center justify-center flex-col'>
             <span className={`${PoppinsSemiBold.className} text-3xl`}>EXPERIENCE</span>
           </div>
