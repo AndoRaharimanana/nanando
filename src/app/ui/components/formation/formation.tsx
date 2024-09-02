@@ -6,7 +6,7 @@ function Item() {
       <div className='relative flex flex-col px-4 border-l-2 border-solid pb-8'>
         <span className={`${PoppinsSemiBold.className}`}>Master</span>
         <span className={`${Lora.className} text-xs`}>ESTIA</span>
-        <div className='absolute -left-4 p-3 border border-solid rotate-45 bg-nanando-white rounded-full'>
+        <div className='absolute -left-4 p-3 border border-solid rotate-45 bg-nanando-white rounded-full hover:rotate-0 hover:bg-reniala-red hover:border-reniala-red transition duration-500'>
         </div>              
       </div>
     );

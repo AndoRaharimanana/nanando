@@ -12,7 +12,7 @@ function Item({ side }: { side: string }) {
             <div className={`pb-10 pl-14 md:pl-0 ${side == 'right' ? '' : 'md:flex md:justify-end md:text-right'}`}>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas euismod fermentum augue, eget porttitor augue rutrum id. Praesent tincidunt placerat augue nec accumsan. Sed a euismod eros.
             </div>
-          <div className={`absolute p-3 border border-solid rotate-45 bg-[#000] -left-6 ${side == 'right' ? 'md:-left-6' : 'md:-right-6 md:left-auto'}`}>
+          <div className={`absolute p-3 border border-solid rotate-45 bg-[#000] -left-6 ${side == 'right' ? 'md:-left-6' : 'md:-right-6 md:left-auto'} hover:rotate-0 hover:bg-reniala-red hover:border-reniala-red transition duration-500`}>
             <Image src={"/camera.png"}
                   width={25}
                   height={25}

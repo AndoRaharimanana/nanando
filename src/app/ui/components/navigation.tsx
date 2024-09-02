@@ -7,12 +7,12 @@ import SocialLinks from "./socialLinks";
 function Menu() {
     return (
         <>
-            <li><a className='[text-shadow:0px_3px_1px_#0a0a0a]' href="#home">Home</a></li>
-            <li><a className='[text-shadow:0px_3px_1px_#0a0a0a]' href="#about">About</a></li>
-            <li><a className='[text-shadow:0px_3px_1px_#0a0a0a]' href="#experience">Experience</a></li>
-            <li><a className='[text-shadow:0px_3px_1px_#0a0a0a]' href="#formation">Formation</a></li>
-            <li><a className='[text-shadow:0px_3px_1px_#0a0a0a]' href="#skills">Skills</a></li>
-            <li><a className='[text-shadow:0px_3px_1px_#0a0a0a]' href="#contact">Let's talk</a></li>        
+            <li><a className='hover:text-reniala-red active:text-reniala-red hover:decoration-solid transition duration-300' href="#home">Home</a></li>
+            <li><a className='hover:text-reniala-red active:text-reniala-red hover:decoration-solid transition duration-300' href="#about">About</a></li>
+            <li><a className='hover:text-reniala-red active:text-reniala-red hover:decoration-solid transition duration-300' href="#experience">Experience</a></li>
+            <li><a className='hover:text-reniala-red active:text-reniala-red hover:decoration-solid transition duration-300' href="#formation">Formation</a></li>
+            <li><a className='hover:text-reniala-red active:text-reniala-red hover:decoration-solid transition duration-300' href="#skills">Skills</a></li>
+            <li><a className='hover:text-reniala-red active:text-reniala-red hover:decoration-solid transition duration-300' href="#contact">Let's talk</a></li>        
         </>
     );
 }
