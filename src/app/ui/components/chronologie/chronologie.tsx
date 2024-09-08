@@ -9,7 +9,7 @@ type ItemProps = {
 function Item({ data, side}: ItemProps) {
     return (
         <div className='flex md:items-center md:justify-center flex-col px-14 md:px-0 lg:px-36'>
-          <div className={`relative flex flex-col w-full md:w-1/2 gap-5 md:px-14 border-solid pb-14 border-l ${side == 'right' ? 'md:self-end md:justify-self-end md:border-l' : 'md:self-start md:justify-self-start md:border-r md:border-l-0'}`}>
+          <div className={`relative flex flex-col w-full md:w-1/2 gap-5 md:px-14 border-solid  border-nanando-grey pb-14 border-l ${side == 'right' ? 'md:self-end md:justify-self-end md:border-l' : 'md:self-start md:justify-self-start md:border-r md:border-l-0'}`}>
             <div className={`flex flex-col pl-14 md:pl-0 ${side == 'right' ? '' : 'md:items-end'}`}>
               <span className={`${Lora.className} text-xs`}>{data.year}</span>
               <span>{data.poste}</span>
@@ -19,17 +19,22 @@ function Item({ data, side}: ItemProps) {
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas euismod fermentum augue, eget porttitor augue rutrum id. Praesent tincidunt placerat augue nec accumsan. Sed a euismod eros.
             </div>
             <div className={`flex flex-wrap gap-6 pl-14 md:pl-0 ${side == 'right' ? '' : 'md:justify-end'}`}>
-              <Image className="hover:animate-bounce" src={"/camera.png"}
-                    width={25}
-                    height={25}
-                    alt=""  />
-
-              <Image src={"/camera.png"}
-                                  width={25}
-                                  height={25}
-                                  alt=""  />                                 
+              {data.projects?.map((item, index) => (                
+                item.logo ? (
+                  <Image className="hover:scale-110 bg-nanando-white p-1 rounded-md" src={item.logo} key={index}
+                        width={100}
+                        height={50}
+                        sizes=""
+                        style={{objectFit: "contain",
+                        maxWidth: "100px", 
+                        maxHeight: "50px", }}
+                        alt=""  />
+                ) : (
+                  <span className={`${PoppinsSemiBold.className} bg-[#E0DF30] rounded-md text-nanando-black p-2 uppercase flex align-items-center`}>{item.name}</span>
+                )                
+              ))}
             </div>
-          <div className={`absolute p-3 border border-solid rotate-45 bg-[#000] -left-8 ${side == 'right' ? 'md:-left-8' : 'md:-right-8 md:left-auto'} hover:scale-125 transition duration-500`}>
+          <div className={`absolute p-3 border border-solid rounded-md border-nanando-grey rotate-45 bg-[#000] -left-8 ${side == 'right' ? 'md:-left-8' : 'md:-right-8 md:left-auto'} hover:scale-125 transition duration-500`}>
             <a href={data.company.link} target="blank">
               <Image src={data.company.logo}
                     width={35}
@@ -52,7 +57,53 @@ export default function Chronologie() {
           name: 'Ifoxcode',
           place: 'Mauritius',
           link: "https://ifoxcode.com/"
-        }
+        },
+        projects: [
+          {
+            name: "AlphaPest Management",
+            logo: "/projects/alphapest.png"
+          },
+          {
+            name: "Burger King - Chatbot",
+            logo: "/projects/Burger-King.png"
+          },
+          {
+            name: "IfoxCode News",
+            logo: "/projects/ifoxcode.jpg"
+          },
+          {
+            name: "Luxury Avenue",
+            logo: "/projects/luxury-avenue.png"
+          },
+          {
+            name: "MaxCity",
+            logo: "/projects/maxcity.png"
+          },
+          {
+            name: "RSE Datanews",
+            logo: "/projects/rdn.png"
+          },
+          {
+            name: "Terminal Management System",
+            logo: "/projects/tms.png"
+          },
+          {
+            name: "BussinessLink",
+            logo: "/projects/businesslink.svg"
+          },
+          {
+            name: "Digital Marketing",
+            logo: "/projects/digitalmarketing.svg"
+          },
+          {
+            name: "Kaktus",
+            logo: "/projects/kaktus.png"
+          },
+          {
+            name: "Sesame",
+            logo: "/projects/sesame.png"
+          }
+        ]
       },
       {
         year: 'December 2021 - by now',
@@ -62,7 +113,28 @@ export default function Chronologie() {
           name: 'BICI',
           place: 'Madagascar',
           link: "https://bici.mg/"
-        }
+        },
+        projects: [
+          {
+            name: "Agence de transport terrestres (ATT)",
+            logo: "/projects/att.jpg"
+          },
+          {
+            name: "La Société du Port à gestion Autonome de Toamasina (S.P.A.T)",
+            logo: "/projects/spat.png"
+          },
+          {
+            name: "Pho Resto",
+            logo: "/projects/pho.jpg"
+          },
+          {
+            name: "Fonds Routier Madagascar",
+            logo: "/projects/fer.png"
+          },
+          {
+            name: "Team Task"
+          }
+        ]
       },
       {
         year: 'July 2023 - October 2023',
@@ -72,7 +144,12 @@ export default function Chronologie() {
           name: 'BICI',
           place: 'Madagascar',
           link: "https://bici.mg/"
-        }
+        },
+        projects: [
+          {
+            name: "Madacoin"
+          }
+        ]
       },
       {
         year: 'December 2021 - March 2023',
@@ -82,7 +159,13 @@ export default function Chronologie() {
           name: 'RAPP',
           place: 'Mauritius',
           link: "https://www.rapp.com/"
-        }
+        },
+        projects: [
+          {
+            name: "Mercedes-Benz OneWeb",
+            logo: "/projects/mercedes.png"
+          }
+        ]
       },
       {
         year: 'August 2021 - November 2021',
@@ -92,7 +175,20 @@ export default function Chronologie() {
           name: 'BICI',
           place: 'Madagascar',
           link: "https://bici.mg/"
-        }
+        },
+        projects: [
+          {
+            name: "La Société du Port à gestion Autonome de Toamasina (S.P.A.T)",
+            logo: "/projects/spat.png"
+          },
+          {
+            name: "Fonds Routier Madagascar",
+            logo: "/projects/fer.png"
+          },
+          {
+            name: "Team Task"
+          }
+        ]
       },
     ];
 

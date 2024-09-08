@@ -8,10 +8,11 @@ function Item({data}: any) {
         <span className={`${Lora.className} text-xs text-nanando-grey`}>{data.place}</span>
         <span className="flex flex-wrap gap-6 mt-4">
           {data.attach?.map((item, index) => (
-                <a href={item.link} key={index} target="blank">
+                <a href={item.link} key={index} target="blank" className={`${item.color ? 'bg-['+item.color+']' : 'bg-nanando-white'} min-h-[50px] rounded-md p-1 flex align-items-center hover:scale-110`}>
                   <Image src={item.logo}
                                           width={100}
                                           height={30}
+                                          style={{objectFit: "contain"}}
                                           alt=""  />                   
                 </a>
           ))}                                      
@@ -45,7 +46,8 @@ export default function Formation() {
         {
           name: "ITU",
           logo: "/itu.png",
-          link: "https://www.ituniversity-mg.com/"
+          link: "https://www.ituniversity-mg.com/",
+          color: "#312999"
         }
       ],
     },
@@ -57,7 +59,8 @@ export default function Formation() {
         {
           name: "ITU",
           logo: "/itu.png",
-          link: "https://www.ituniversity-mg.com/"
+          link: "https://www.ituniversity-mg.com/",
+          color: "#312999"
         }
       ],
     },
