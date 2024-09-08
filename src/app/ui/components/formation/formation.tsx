@@ -3,7 +3,7 @@ import Image from 'next/image';
 
 function Item({data}: any) {
     return (
-      <div className='relative flex flex-col pl-10 border-l-2 border-solid pb-8'>
+      <div className='relative flex flex-col pl-10 border-l-2 border-solid pb-8 border-nanando-grey'>
         <span className={`${PoppinsSemiBold.className}`}>{data.degree} <span className={`${Lora.className} text-xs`}>({data.year})</span></span>
         <span className={`${Lora.className} text-xs text-nanando-grey`}>{data.place}</span>
         <span className="flex flex-wrap gap-6 mt-4">
@@ -17,7 +17,7 @@ function Item({data}: any) {
                 </a>
           ))}                                      
         </span>
-        <div className='absolute -left-4 p-3 border border-solid bg-nanando-white rounded-full hover:scale-125 transition duration-500'>
+        <div className='absolute -left-4 p-3 border border-solid bg-nanando-grey border-nanando-grey rounded-full hover:scale-125 transition duration-500'>
         <Image src={"/checkmark.png"}
                                   width={15}
                                   height={15}

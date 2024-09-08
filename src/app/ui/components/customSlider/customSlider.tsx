@@ -208,6 +208,9 @@ export default function CustomSlider({ value, changeData }: CustomSliderProps) {
         },
         {
           name: 'TypeScript',
+        },
+        {
+          name: 'Blockchain',
         }
       ]     
     }
