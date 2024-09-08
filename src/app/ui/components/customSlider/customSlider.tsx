@@ -1,5 +1,6 @@
 import { PoppinsBold, PoppinsSemiBold} from "../../font";
 import { Slider } from 'rsuite';
+import Image from 'next/image';
 
 type ProgressProps = {
   value: number;
@@ -78,18 +79,38 @@ export default function CustomSlider({ value, changeData }: CustomSliderProps) {
         value: 75,
       },
       {
-        name: 'Docker',
+        name: 'SQL',
+        value: 75,
+      },
+      {
+        name: 'NoSQL',
+        value: 75,
+      },
+      {
+        name: 'Symfony',
+        value: 75,
+      },
+      {
+        name: 'Ethereum',
         value: 75,
       }
     ];
 
     const frontEndData = [
       {
-        name: 'React',
+        name: 'HTML/CSS',
         value: 90,
       },
       {
-        name: 'SCSS',
+        name: 'JavaScript',
+        value: 75,
+      },
+      {
+        name: 'React',
+        value: 75,
+      },
+      {
+        name: 'React Native',
         value: 75,
       },
       {
@@ -97,7 +118,11 @@ export default function CustomSlider({ value, changeData }: CustomSliderProps) {
         value: 75,
       },
       {
-        name: 'React Native',
+        name: 'Sass',
+        value: 75,
+      },
+      {
+        name: 'JQuery',
         value: 75,
       }
     ]
@@ -109,11 +134,26 @@ export default function CustomSlider({ value, changeData }: CustomSliderProps) {
           <span className="text-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>
           <span className={`${PoppinsBold.className} text-7xl absolute text-nanando-soft-grey z-[-1]`}>Skills</span>
         </div>
-        <div className='relative flex item-between justify-between w-full h-32'>
+        <div className='relative flex item-between justify-between w-full h-32 md:h-c17'>
           <Item name="Back" value={value} side="left" data={backEndData}/>
           <Item name="Front" value={value} side="right" data={frontEndData}/>
           <div className='w-full absolute top-1/2'>
             <Slider defaultValue={value} onChange={changeData} tooltip={false} />
+          </div>
+        </div>
+        <div className="flex flex-col w-full items-center justify-center">
+          <span className={`${PoppinsSemiBold.className} text-xl`}>Additional skills</span>
+          <div className="flex items-center justify-center flex-wrap gap-10">
+            <Image src="/camera.png"
+                        width={75}
+                        height={75}
+                        sizes=""
+                        style={{objectFit: "contain",
+                        maxWidth: "75px", 
+                        maxHeight: "75px", }}
+                        className="bg-nanando-grey rounded-full p-3"
+                        alt=""  />
+            <span className={`${PoppinsSemiBold.className} text-center bg-nanando-grey rounded-md text-nanando-black p-2 uppercase flex align-items-center max-h-8`}>CORS</span>                                    
           </div>
         </div>
       </div>

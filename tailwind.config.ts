@@ -25,7 +25,8 @@ const config: Config = {
       },
       spacing:{
         "c348": "348px",
-        "c75": "75px"
+        "c75": "75px",
+        "c17": "17rem"
       }
     },
   },
