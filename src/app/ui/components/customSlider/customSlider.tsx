@@ -93,6 +93,10 @@ export default function CustomSlider({ value, changeData }: CustomSliderProps) {
       {
         name: 'Ethereum',
         value: 75,
+      },
+      {
+        name: 'NodeJS',
+        value: 75,
       }
     ];
 
@@ -127,6 +131,87 @@ export default function CustomSlider({ value, changeData }: CustomSliderProps) {
       }
     ]
 
+    const additionalSkillsData = {
+      withPhoto: [
+        {
+          name: 'Visual Code',
+          logo: "/skills/visualcode.png",
+        },
+        {
+          name: 'Expo',
+          logo: "/skills/expo.png",
+        },
+        {
+          name: 'Github',
+          logo: "/skills/github.png",
+        },
+        {
+          name: 'Docker',
+          logo: "/skills/docker.png",
+        },
+        {
+          name: 'Firebase',
+          logo: "/skills/firebase.png",
+        },
+        {
+          name: 'Postman',
+          logo: "/skills/postman.png",
+        },
+        {
+          name: 'MySQL',
+          logo: "/skills/mysql.png",
+        },
+        {
+          name: 'Postgresql',
+          logo: "/skills/postgresql.png",
+        },
+        {
+          name: 'MongoDB',
+          logo: "/skills/mongodb.png",
+        },
+        {
+          name: 'NextJS',
+          logo: "/skills/nextjs.png",
+        },
+        {
+          name: 'Wordpress',
+          logo: "/skills/wordpress.png",
+        } 
+      ],
+      noPhoto: [
+        {
+          name: 'JWT/Basic/Token Auth',          
+        },
+        {
+          name: 'RESTful APIs',
+        },
+        {
+          name: 'JSON APIs',
+        },
+        {
+          name: 'ORMs',
+        },
+        {
+          name: 'Microservices',
+        },
+        {
+          name: 'Responsive Design',
+        },
+        {
+          name: 'DOM Manipulation',
+        },
+        {
+          name: 'Fecth API/Ajax',
+        },
+        {
+          name: 'Package Managers(npm)',
+        },
+        {
+          name: 'TypeScript',
+        }
+      ]     
+    }
+
     return (
       <div className='flex flex-1 items-center justify-start md:justify-center flex-col gap-7 mx-14 lg:mx-36 min-h-[650px] md:min-h-fit py-c75' id="skills">
         <div className='relative flex items-center justify-center flex-col gap-4'>
@@ -144,16 +229,20 @@ export default function CustomSlider({ value, changeData }: CustomSliderProps) {
         <div className="flex flex-col w-full items-center justify-center">
           <span className={`${PoppinsSemiBold.className} text-xl`}>Additional skills</span>
           <div className="flex items-center justify-center flex-wrap gap-10">
-            <Image src="/camera.png"
-                        width={75}
-                        height={75}
-                        sizes=""
-                        style={{objectFit: "contain",
-                        maxWidth: "75px", 
-                        maxHeight: "75px", }}
-                        className="bg-nanando-grey rounded-full p-3"
-                        alt=""  />
-            <span className={`${PoppinsSemiBold.className} text-center bg-nanando-grey rounded-md text-nanando-black p-2 uppercase flex align-items-center max-h-8`}>CORS</span>                                    
+            {additionalSkillsData.withPhoto.map((item, index) => (                         
+              <Image src={item.logo} key={index}
+                width={125}
+                height={75}
+                sizes=""
+                style={{objectFit: "contain",
+                maxWidth: "125px", 
+                maxHeight: "75px", }}
+                className="bg-nanando-grey rounded-full p-3 hover:scale-110"
+                alt=""  />
+            ))}
+            {additionalSkillsData.noPhoto.map((item, index) => (                         
+              <span key={index} className={`${PoppinsSemiBold.className} text-center bg-nanando-grey rounded-md text-nanando-black p-2 uppercase flex align-items-center max-h-8 hover:scale-110`}>{item.name}</span>                                    
+            ))}                        
           </div>
         </div>
       </div>
