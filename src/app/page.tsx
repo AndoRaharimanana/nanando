@@ -10,6 +10,9 @@ import React, {useState} from 'react';
 import Chronologie from './ui/components/chronologie/chronologie';
 import Formation from './ui/components/formation/formation';
 import CustomSlider from './ui/components/customSlider/customSlider';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faLinkedin, faWhatsapp } from '@fortawesome/free-brands-svg-icons'
+import { faEnvelope } from '@fortawesome/free-solid-svg-icons'
 
 config.autoAddCss = false
 
@@ -79,18 +82,30 @@ export default function Home() {
             >
               Download resume
             </button>
-            <button
-              type="button"
-              className={`${PoppinsSemiBold.className} inline-block rounded px-4 lg:px-6 py-4 text-xs uppercase text-white bg-reniala-red hover:-translate-y-1 hover:bg-reniala-red-dark transition ease-in-out delay-150 duration-300`}
-            >
-              Contact me
-            </button>
+            <a href="#contact">
+              <button
+                type="button"
+                className={`${PoppinsSemiBold.className} inline-block rounded px-4 lg:px-6 py-4 text-xs uppercase text-white bg-reniala-red hover:-translate-y-1 hover:bg-reniala-red-dark transition ease-in-out delay-150 duration-300`}
+              >
+                Contact me
+              </button>
+            </a>
           </div>
         </div>
       </div>
       <Chronologie />
       <Formation />
       <CustomSlider value={value} changeData={changeData}/>
+      <div className='flex flex-1 items-center justify-center flex-col gap-7 px-14 lg:px-36 py-c75' id="contact">
+        <div className='flex items-center justify-center flex-col'>
+          <span className={`${PoppinsSemiBold.className} text-3xl`}>CONTACT ME</span>
+        </div>
+        <div className='flex justify-between w-full gap-base md:gap-0'>
+          <span><a href="#" className='hover:text-reniala-red'><FontAwesomeIcon icon={faEnvelope} /> raharimanana99@gmail.com</a></span>
+          <span><a href="#" className='hover:text-reniala-red'><FontAwesomeIcon icon={faWhatsapp} /> +261 34 44 077 12</a></span>
+          <span><a href="#" className='hover:text-reniala-red'><FontAwesomeIcon icon={faLinkedin} /> Ando Raharimanana</a></span>
+        </div>
+      </div>      
     </main>
   );
 }

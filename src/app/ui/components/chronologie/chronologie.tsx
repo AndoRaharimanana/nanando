@@ -30,7 +30,7 @@ function Item({ data, side}: ItemProps) {
                         maxHeight: "50px", }}
                         alt=""  />
                 ) : (
-                  <span className={`${PoppinsSemiBold.className} bg-[#E0DF30] rounded-md text-nanando-black p-2 uppercase flex align-items-center`}>{item.name}</span>
+                  <span className={`${PoppinsSemiBold.className} bg-[#E0DF30] rounded-md text-nanando-black p-2 uppercase flex items-center`}>{item.name}</span>
                 )                
               ))}
             </div>

@@ -222,24 +222,24 @@ export default function CustomSlider({ value, changeData }: CustomSliderProps) {
           <span className="text-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>
           <span className={`${PoppinsBold.className} text-7xl absolute text-nanando-soft-grey z-[-1]`}>Skills</span>
         </div>
-        <div className='relative flex item-between justify-between w-full h-32 md:h-c17'>
+        <div className='relative flex item-between justify-between w-full h-c575 md:h-c17'>
           <Item name="Back" value={value} side="left" data={backEndData}/>
           <Item name="Front" value={value} side="right" data={frontEndData}/>
           <div className='w-full absolute top-1/2'>
             <Slider defaultValue={value} onChange={changeData} tooltip={false} />
           </div>
         </div>
-        <div className="flex flex-col w-full items-center justify-center">
-          <span className={`${PoppinsSemiBold.className} text-xl`}>Additional skills</span>
-          <div className="flex items-center justify-center flex-wrap gap-10">
+        <div className="flex flex-col w-full items-center justify-center pt-16">
+          <span className={`${PoppinsSemiBold.className} text-xl mb-4`}>Additional skills</span>
+          <div className="flex items-center justify-between md:justify-center flex-wrap gap-4 md:gap-10">
             {additionalSkillsData.withPhoto.map((item, index) => (                         
               <Image src={item.logo} key={index}
                 width={125}
-                height={75}
+                height={50}
                 sizes=""
                 style={{objectFit: "contain",
-                maxWidth: "125px", 
-                maxHeight: "75px", }}
+                maxWidth: "100px", 
+                maxHeight: "50px", }}
                 className="bg-nanando-grey rounded-full p-3 hover:scale-110"
                 alt=""  />
             ))}
