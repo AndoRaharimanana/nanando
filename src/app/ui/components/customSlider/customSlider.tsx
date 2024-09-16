@@ -232,7 +232,7 @@ export default function CustomSlider({ value, changeData }: CustomSliderProps) {
         <div className="flex flex-col w-full items-center justify-center pt-16">
           <span className={`${PoppinsSemiBold.className} text-xl mb-4`}>Additional skills</span>
           <div className="flex items-center justify-between md:justify-center flex-wrap gap-4 md:gap-10">
-            {additionalSkillsData.withPhoto.map((item, index) => (                         
+            {additionalSkillsData.withPhoto.map((item:any, index:number) => (                         
               <Image src={item.logo} key={index}
                 width={125}
                 height={50}
@@ -243,7 +243,7 @@ export default function CustomSlider({ value, changeData }: CustomSliderProps) {
                 className="bg-nanando-white rounded-full p-3 hover:scale-110"
                 alt=""  />
             ))}
-            {additionalSkillsData.noPhoto.map((item, index) => (                         
+            {additionalSkillsData.noPhoto.map((item:any, index:number) => (                         
               <span key={index} className={`${PoppinsSemiBold.className} text-center bg-nanando-white rounded-md text-nanando-black p-2 uppercase flex align-items-center max-h-8 hover:scale-110`}>{item.name}</span>                                    
             ))}                        
           </div>

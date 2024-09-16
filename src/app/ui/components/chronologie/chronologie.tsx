@@ -198,7 +198,7 @@ export default function Chronologie() {
             <span className={`${PoppinsSemiBold.className} text-3xl`}>EXPERIENCE</span>
           </div>
           <div>
-            {data.map((item, index) => (
+            {data.map((item:any, index:number) => (
               <Item key={index} data={item} side={index % 2 === 0? 'right' : 'left'}/>
             ))}
           </div>
