@@ -19,7 +19,7 @@ function Item({ data, side}: ItemProps) {
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas euismod fermentum augue, eget porttitor augue rutrum id. Praesent tincidunt placerat augue nec accumsan. Sed a euismod eros.
             </div>
             <div className={`flex flex-wrap gap-6 pl-14 md:pl-0 ${side == 'right' ? '' : 'md:justify-end'}`}>
-              {data.projects?.map((item, index) => (                
+              {data.projects?.map((item:any, index:number) => (                
                 item.logo ? (
                   <Image className="hover:scale-110 bg-nanando-white p-1 rounded-md" src={item.logo} key={index}
                         width={100}
@@ -30,7 +30,7 @@ function Item({ data, side}: ItemProps) {
                         maxHeight: "50px", }}
                         alt=""  />
                 ) : (
-                  <span className={`${PoppinsSemiBold.className} bg-[#E0DF30] rounded-md text-nanando-black p-2 uppercase flex items-center`}>{item.name}</span>
+                  <span className={`${PoppinsSemiBold.className} bg-[#E0DF30] rounded-md text-nanando-black p-2 uppercase flex items-center`} key={index}>{item.name}</span>
                 )                
               ))}
             </div>
@@ -195,10 +195,10 @@ export default function Chronologie() {
     return (
         <div className='flex flex-1 items-center justify-center flex-col gap-7 py-c75' id="experience">
           <div className='flex items-center justify-center flex-col'>
-            <span className={`${PoppinsSemiBold.className} text-3xl`}>EXPERIENCE</span>
+            <span className={`${PoppinsSemiBold.className} text-3xl`}>EXPERIENCES</span>
           </div>
           <div>
-            {data.map((item, index) => (
+            {data.map((item:any, index:number) => (
               <Item key={index} data={item} side={index % 2 === 0? 'right' : 'left'}/>
             ))}
           </div>

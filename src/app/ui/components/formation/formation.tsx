@@ -7,7 +7,7 @@ function Item({data}: any) {
         <span className={`${PoppinsSemiBold.className}`}>{data.degree} <span className={`${Lora.className} text-xs`}>({data.year})</span></span>
         <span className={`${Lora.className} text-xs text-nanando-grey`}>{data.place}</span>
         <span className="flex flex-wrap gap-6 mt-4">
-          {data.attach?.map((item, index) => (
+          {data.attach?.map((item:any, index:number) => (
                 <a href={item.link} key={index} target="blank" className={`${item.color ? 'bg-['+item.color+']' : 'bg-nanando-white'} min-h-[50px] rounded-md p-1 flex align-items-center hover:scale-110`}>
                   <Image src={item.logo}
                                           width={100}
@@ -82,7 +82,7 @@ export default function Formation() {
             <span className={`${PoppinsSemiBold.className} text-base md:text-2xl`}>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>
           </div>
           <div className='flex flex-1 flex-col'>
-            {data.map((item, index) => (
+            {data.map((item:any, index:number) => (
               <Item key={index} data={item}/>
             ))}
           </div>
