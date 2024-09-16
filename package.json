@@ -16,6 +16,7 @@
     "next": "14.2.5",
     "react": "^18",
     "react-dom": "^18",
+    "react-github-calendar": "^4.3.0",
     "rsuite": "^5.69.0"
   },
   "devDependencies": {

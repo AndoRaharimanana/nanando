@@ -240,11 +240,11 @@ export default function CustomSlider({ value, changeData }: CustomSliderProps) {
                 style={{objectFit: "contain",
                 maxWidth: "100px", 
                 maxHeight: "50px", }}
-                className="bg-nanando-grey rounded-full p-3 hover:scale-110"
+                className="bg-nanando-white rounded-full p-3 hover:scale-110"
                 alt=""  />
             ))}
             {additionalSkillsData.noPhoto.map((item, index) => (                         
-              <span key={index} className={`${PoppinsSemiBold.className} text-center bg-nanando-grey rounded-md text-nanando-black p-2 uppercase flex align-items-center max-h-8 hover:scale-110`}>{item.name}</span>                                    
+              <span key={index} className={`${PoppinsSemiBold.className} text-center bg-nanando-white rounded-md text-nanando-black p-2 uppercase flex align-items-center max-h-8 hover:scale-110`}>{item.name}</span>                                    
             ))}                        
           </div>
         </div>
