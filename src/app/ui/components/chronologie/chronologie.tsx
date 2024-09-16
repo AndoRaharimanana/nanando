@@ -19,7 +19,7 @@ function Item({ data, side}: ItemProps) {
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas euismod fermentum augue, eget porttitor augue rutrum id. Praesent tincidunt placerat augue nec accumsan. Sed a euismod eros.
             </div>
             <div className={`flex flex-wrap gap-6 pl-14 md:pl-0 ${side == 'right' ? '' : 'md:justify-end'}`}>
-              {data.projects?.map((item, index) => (                
+              {data.projects?.map((item:any, index:number) => (                
                 item.logo ? (
                   <Image className="hover:scale-110 bg-nanando-white p-1 rounded-md" src={item.logo} key={index}
                         width={100}
