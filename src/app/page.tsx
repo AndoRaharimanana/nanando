@@ -5,7 +5,6 @@ import { Lora, ArchivoBlack, PoppinsSemiBold, PoppinsBold, Poppins } from "./ui/
 import Navigation from './ui/components/navigation'
 import SocialLinks from './ui/components/socialLinks';
 import Image from 'next/image';
-import { Slider } from 'rsuite';
 import React, {useState} from 'react';
 import Chronologie from './ui/components/chronologie/chronologie';
 import Formation from './ui/components/formation/formation';
@@ -78,12 +77,14 @@ export default function Home() {
           </div>
           <p className={`${Poppins.className} max-w-md`}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
           <div className='flex items-start justify-center gap-7'>
-            <button
-              type="button"
-              className={`${PoppinsSemiBold.className} inline-block rounded px-4 lg:px-6 py-4 text-xs uppercase text-white bg-reniala-red hover:-translate-y-1 hover:bg-reniala-red-dark transition ease-in-out delay-150 duration-300`}
-            >
-              Download resume
-            </button>
+            <a href="/api/download">
+              <button
+                type="button"
+                className={`${PoppinsSemiBold.className} inline-block rounded px-4 lg:px-6 py-4 text-xs uppercase text-white bg-reniala-red hover:-translate-y-1 hover:bg-reniala-red-dark transition ease-in-out delay-150 duration-300`}
+              >
+                Download resume
+              </button>
+            </a>
             <a href="#contact">
               <button
                 type="button"
