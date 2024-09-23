@@ -3,6 +3,9 @@ import { Poppins, PoppinsSemiBold, Lora} from "../font";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBars, faXmark } from '@fortawesome/free-solid-svg-icons'
 import SocialLinks from "./socialLinks";
+import { faWhatsapp } from '@fortawesome/free-brands-svg-icons'
+import { faEnvelope } from '@fortawesome/free-solid-svg-icons'
+import data from '@/app/services/data';
 
 function Menu() {
     return (
@@ -39,8 +42,8 @@ export default function Navigation() {
                     </div>
                     <div className="flex flex-col gap-4">
                         <ul className={`leading-6 ${Lora.className}`}>
-                            <li className="">aanod@email.com</li>
-                            <li className="">+2613404040</li>
+                            <li className=""><FontAwesomeIcon icon={faEnvelope} /> {data.profile.email}</li>
+                            <li className=""><FontAwesomeIcon icon={faWhatsapp} /> {data.profile.phone}</li>
                         </ul>                
                         <div>
                             <SocialLinks />

@@ -14,6 +14,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faLinkedin, faWhatsapp } from '@fortawesome/free-brands-svg-icons'
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons'
 import GitHubCalendar from 'react-github-calendar';
+import data from './services/data';
 
 config.autoAddCss = false
 
@@ -97,7 +98,7 @@ export default function Home() {
       <Chronologie />
       <Formation />
       <CustomSlider value={value} changeData={changeData}/>
-      <div className='flex flex-1 items-center justify-center gap-7 px-14 lg:px-36 py-c75'>        
+      <div className='flex flex-1 flex-col md:flex-row items-center justify-center gap-7 px-14 lg:px-36 py-c75'>        
         <span className={`${PoppinsSemiBold.className} text-xl mb-4`}>Website made with: </span>
         <div className='flex justify-center w-full gap-10'>          
           <Image src="/skills/nextjs.png"
@@ -133,10 +134,10 @@ export default function Home() {
         <div className='flex items-center justify-center flex-col'>
           <span className={`${PoppinsSemiBold.className} text-3xl`}>CONTACT ME</span>
         </div>
-        <div className='flex justify-between w-full gap-base md:gap-0'>
-          <span><a href="#" className='hover:text-reniala-red'><FontAwesomeIcon icon={faEnvelope} /> raharimanana99@gmail.com</a></span>
-          <span><a href="#" className='hover:text-reniala-red'><FontAwesomeIcon icon={faWhatsapp} /> +261 34 44 077 12</a></span>
-          <span><a href="#" className='hover:text-reniala-red'><FontAwesomeIcon icon={faLinkedin} /> Ando Raharimanana</a></span>
+        <div className='flex flex-col md:flex-row items-center justify-between w-full gap-base md:gap-0'>
+          <span><a href="#" className='hover:text-reniala-red'><FontAwesomeIcon icon={faEnvelope} /> {data.profile.email}</a></span>
+          <span><a href="#" className='hover:text-reniala-red'><FontAwesomeIcon icon={faWhatsapp} /> {data.profile.phone}</a></span>
+          <span><a href="#" className='hover:text-reniala-red'><FontAwesomeIcon icon={faLinkedin} /> {data.profile.fullname}</a></span>
         </div>       
       </div>      
       <div className='hidden flex flex-1 items-center justify-center flex-col gap-7 px-14 lg:px-36 py-c75' id="contact">

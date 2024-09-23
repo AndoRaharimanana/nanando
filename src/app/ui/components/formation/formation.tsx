@@ -1,5 +1,6 @@
 import { PoppinsSemiBold, Lora} from "../../font";
 import Image from 'next/image';
+import data from "@/app/services/data";
 
 function Item({data}: any) {
     return (
@@ -27,49 +28,6 @@ function Item({data}: any) {
     );
 }
 export default function Formation() {
-  const data =  [
-    {
-      year: '2023',
-      degree: 'Master of Science BIHAR - Big data & AI',
-      place: 'ESTIA(France)\ ITuniversity',
-      attach: [
-        {
-          name: "Estia",
-          logo: "/estia.png",
-          link: "https://www.estia.fr/"
-        },
-        {
-          name: "Bihar",
-          logo: "/bihar.png",
-          link: "https://www.estia.fr/formations/formations-longues-diplomantes/msc-bihar"
-        },
-        {
-          name: "ITU",
-          logo: "/itu.png",
-          link: "https://www.ituniversity-mg.com/",
-          color: "#312999"
-        }
-      ],
-    },
-    {
-      year: '2021',
-      degree: "Bachelor's degree in development",
-      place: 'ITuniversity',
-      attach: [
-        {
-          name: "ITU",
-          logo: "/itu.png",
-          link: "https://www.ituniversity-mg.com/",
-          color: "#312999"
-        }
-      ],
-    },
-    {
-      year: '2018',
-      degree: "Scientific baccalaureate diploma C",
-      place: 'Lycée Saint Antoine'
-    },
-  ];
 
     return (
       <div className='flex flex-1 items-center justify-center flex-col gap-7 px-14 lg:px-36 py-c75' id="formation">
@@ -82,7 +40,7 @@ export default function Formation() {
             <span className={`${PoppinsSemiBold.className} text-base md:text-2xl`}>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>
           </div>
           <div className='flex flex-1 flex-col'>
-            {data.map((item:any, index:number) => (
+            {data.formation.map((item:any, index:number) => (
               <Item key={index} data={item}/>
             ))}
           </div>
