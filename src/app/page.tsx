@@ -48,7 +48,7 @@ export default function Home() {
               </span>
             </div>
           </div>
-          <div className="flex flex-[2] justify-end items-start min-h-full">
+          <div className="flex flex-[2] justify-end items-start min-h-full z-50">
             <Navigation />
           </div>
         </div>
@@ -135,9 +135,9 @@ export default function Home() {
           <span className={`${PoppinsSemiBold.className} text-3xl`}>CONTACT ME</span>
         </div>
         <div className='flex flex-col md:flex-row items-center justify-between w-full gap-base md:gap-0'>
-          <span><a href="#" className='hover:text-reniala-red'><FontAwesomeIcon icon={faEnvelope} /> {data.profile.email}</a></span>
-          <span><a href="#" className='hover:text-reniala-red'><FontAwesomeIcon icon={faWhatsapp} /> {data.profile.phone}</a></span>
-          <span><a href="#" className='hover:text-reniala-red'><FontAwesomeIcon icon={faLinkedin} /> {data.profile.fullname}</a></span>
+          <span><a href={`mailto:${data.profile.email}`} className='hover:text-reniala-red'><FontAwesomeIcon icon={faEnvelope} /> {data.profile.email}</a></span>
+          <span><a href={`tel:${data.profile.phone}`} className='hover:text-reniala-red'><FontAwesomeIcon icon={faWhatsapp} /> {data.profile.phone}</a></span>
+          <span><a href={data.profile.linkedinLink} target='_blank' className='hover:text-reniala-red'><FontAwesomeIcon icon={faLinkedin} /> {data.profile.fullname}</a></span>
         </div>       
       </div>      
       <div className='hidden flex flex-1 items-center justify-center flex-col gap-7 px-14 lg:px-36 py-c75' id="contact">

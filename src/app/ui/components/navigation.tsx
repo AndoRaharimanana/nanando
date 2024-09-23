@@ -7,15 +7,26 @@ import { faWhatsapp } from '@fortawesome/free-brands-svg-icons'
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons'
 import data from '@/app/services/data';
 
-function Menu() {
+type MenuProps = {
+    displayMobileMenu?: boolean;
+    setDisplayMobileMenu?: any;
+  };
+
+function Menu({ displayMobileMenu, setDisplayMobileMenu}: MenuProps) {
+    const clickMobileMenu = () => {
+        if(displayMobileMenu){
+            setDisplayMobileMenu(!displayMobileMenu);
+        }
+    }; 
+
     return (
         <>
-            <li><a className='hover:text-reniala-red active:text-reniala-red hover:decoration-solid transition duration-300' href="#home">Home</a></li>
-            <li><a className='hover:text-reniala-red active:text-reniala-red hover:decoration-solid transition duration-300' href="#about">About</a></li>
-            <li><a className='hover:text-reniala-red active:text-reniala-red hover:decoration-solid transition duration-300' href="#experience">Experience</a></li>
-            <li><a className='hover:text-reniala-red active:text-reniala-red hover:decoration-solid transition duration-300' href="#formation">Formation</a></li>
-            <li><a className='hover:text-reniala-red active:text-reniala-red hover:decoration-solid transition duration-300' href="#skills">Skills</a></li>
-            <li><a className='hover:text-reniala-red active:text-reniala-red hover:decoration-solid transition duration-300' href="#contact">Let's talk</a></li>        
+            <li><a onClick={() => clickMobileMenu()} className='hover:text-reniala-red active:text-reniala-red hover:decoration-solid transition duration-300' href="#home">Home</a></li>
+            <li><a onClick={() => clickMobileMenu()} className='hover:text-reniala-red active:text-reniala-red hover:decoration-solid transition duration-300' href="#about">About</a></li>
+            <li><a onClick={() => clickMobileMenu()} className='hover:text-reniala-red active:text-reniala-red hover:decoration-solid transition duration-300' href="#experience">Experience</a></li>
+            <li><a onClick={() => clickMobileMenu()} className='hover:text-reniala-red active:text-reniala-red hover:decoration-solid transition duration-300' href="#formation">Formation</a></li>
+            <li><a onClick={() => clickMobileMenu()} className='hover:text-reniala-red active:text-reniala-red hover:decoration-solid transition duration-300' href="#skills">Skills</a></li>
+            <li><a onClick={() => clickMobileMenu()} className='hover:text-reniala-red active:text-reniala-red hover:decoration-solid transition duration-300' href="#contact">Let's talk</a></li>        
         </>
     );
 }
@@ -37,13 +48,13 @@ export default function Navigation() {
                 <div className="flex flex-col md:flex-row items-center justify-around gap-6 md:w-full">
                     <div className="flex">
                         <ul className={`leading-[80px] text-3xl ${PoppinsSemiBold.className}`}>
-                            <Menu />
+                            <Menu displayMobileMenu={displayMobileMenu} setDisplayMobileMenu={setDisplayMobileMenu} />
                         </ul>
                     </div>
                     <div className="flex flex-col gap-4">
                         <ul className={`leading-6 ${Lora.className}`}>
-                            <li className=""><FontAwesomeIcon icon={faEnvelope} /> {data.profile.email}</li>
-                            <li className=""><FontAwesomeIcon icon={faWhatsapp} /> {data.profile.phone}</li>
+                            <li className=""><FontAwesomeIcon icon={faEnvelope} /> <a href={`mailto:${data.profile.email}`}>{data.profile.email}</a></li>
+                            <li className=""><FontAwesomeIcon icon={faWhatsapp} /> <a href={`tel:${data.profile.phone}`}>{data.profile.phone}</a></li>
                         </ul>                
                         <div>
                             <SocialLinks />
