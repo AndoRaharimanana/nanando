@@ -57,7 +57,7 @@ export default function Home() {
           <Image src={"/cv/IMG_0166.PNG"}
                  width={300}
                  height={300}
-                 alt="" />
+                 alt="Ando Raharimanana" />
         </div>
         <div className='flex flex-1 items-center md:items-start justify-center flex-col gap-7'>
           <div className='flex items-start justify-center flex-col'>
@@ -72,7 +72,7 @@ export default function Home() {
               <Image src={"/cv/IMG_0166.PNG"}
                     width={300}
                     height={300}
-                    alt="" />
+                    alt="Ando Raharimanana" />
             </div>
           </div>
           <div className={`${Poppins.className} max-w-md text-justify`}>
