@@ -37,7 +37,7 @@ export default function Formation() {
         <div className='flex justify-between w-full gap-base md:gap-0'>
           <div className='flex flex-1 flex-col'>
             <span>Experience</span>
-            <span className={`${PoppinsSemiBold.className} text-base md:text-2xl`}>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>
+            <span className={`${PoppinsSemiBold.className} text-base md:text-2xl`}>The 3 years of professional experience were part of my 5-year IT development studies.</span>
           </div>
           <div className='flex flex-1 flex-col'>
             {data.formation.map((item:any, index:number) => (

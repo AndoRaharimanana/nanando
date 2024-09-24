@@ -16,8 +16,8 @@ function Item({ data, side}: ItemProps) {
               <span>{data.poste}</span>
               <span className="text-nanando-grey">{data.company.name} <span className="text-xs">({data.company.place})</span></span>
             </div>
-            <div className={`pb-10 pl-14 md:pl-0 ${side == 'right' ? '' : 'md:flex md:justify-end md:text-right'}`}>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas euismod fermentum augue, eget porttitor augue rutrum id. Praesent tincidunt placerat augue nec accumsan. Sed a euismod eros.
+            <div className={`pb-10 pl-14 md:pl-0 text-justify ${side == 'right' ? '' : 'md:flex md:justify-end md:text-right'}`}>
+              {data.description}
             </div>
             <div className={`flex flex-wrap gap-4 md:gap-6 pl-14 md:pl-0 ${side == 'right' ? '' : 'md:justify-end'}`}>
               {data.projects?.map((item:any, index:number) => (                

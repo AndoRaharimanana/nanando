@@ -75,7 +75,8 @@ export default function Home() {
                     alt="" />
             </div>
           </div>
-          <p className={`${Poppins.className} max-w-md`}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          <p className={`${Poppins.className} max-w-md text-justify`}>I am a full-stack mobile and web developer with experience in React Native, React, Symfony PHP, and Java. I’m professional, autonomous, and highly motivated, leveraging AI to streamline development and solve problems efficiently.
+          <p>I continuously strive to learn and improve, delivering high-quality solutions across diverse projects. Fluent in French and conversational in English, I am dedicated to pushing boundaries and contributing to the success of your projects through innovative development practices.</p></p>
           <div className='flex items-start justify-center gap-7'>
             <a href="/api/download">
               <button

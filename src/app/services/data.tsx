@@ -9,6 +9,7 @@
           place: 'Mauritius',
           link: "https://ifoxcode.com/"
         },
+        description: "I spent 1.5 years as a full-stack mobile developer at iFoxCode (Mauritius), working remotely. My role involved building Android and iOS mobile apps using React Native, developing backend APIs with Symfony, and redesigning and creating web applications with React. My experience there allowed me to contribute to diverse projects, handling both frontend and backend tasks to deliver complete solutions on several projects.",
         projects: [
           {
             name: "AlphaPest Management",
@@ -65,6 +66,7 @@
           place: 'Madagascar',
           link: "https://bici.mg/"
         },
+        description: "I spent 3 years as a Java developer at BICI, working on-site. My responsibilities included debugging and fixing issues for web applications, developing backend solutions, and reporting customer feedback. I also proposed solutions based on this feedback and trained customers on how to effectively use the applications. This experience sharpened my problem-solving skills and deepened my expertise in backend development.",
         projects: [
           {
             name: "Agence de transport terrestres (ATT)",
@@ -96,6 +98,7 @@
           place: 'Madagascar',
           link: "https://bici.mg/"
         },
+        description: "During my 3-month internship at BICI as a Blockchain Developer, I worked on creating a cryptocurrency using blockchain technology. My responsibilities included developing a website and wallet integrated with MetaMask, ensuring smooth transaction processes, and building functionalities for minting currency. This experience enhanced my understanding of blockchain applications and cryptocurrency development.",
         projects: [
           {
             name: "Madacoin"
@@ -111,6 +114,7 @@
           place: 'Mauritius',
           link: "https://www.rapp.com/"
         },
+        description: "At RAPP Mauritius, I worked remotely as a Webmaster for over a year. My role involved managing the content of Mercedes-Benz websites across multiple countries (France, UK, Japan, Argentina, Switzerland, and others). I was responsible for troubleshooting, proposing solutions for bugs, and assisting customers with updates. This experience honed my ability to manage content at scale and provide effective client support.",
         projects: [
           {
             name: "Mercedes-Benz OneWeb",
@@ -127,6 +131,7 @@
           place: 'Madagascar',
           link: "https://bici.mg/"
         },
+        description: "During my 3-month internship at BICI, I worked on-site as a Java Developer. My responsibilities included debugging and fixing issues for web applications, proposing and developing new functionalities for the internal team task management system. This experience helped me enhance my problem-solving skills and contribute to team projects with innovative solutions.",
         projects: [
           {
             name: "La Société du Port à gestion Autonome de Toamasina (S.P.A.T)",
@@ -145,27 +150,27 @@
     backEndData: [
       {
         name: 'Php',
-        value: 75,
+        value: 90,
       },
       {
         name: 'Java',
-        value: 75,
+        value: 80,
       },
       {
         name: 'C#',
-        value: 75,
+        value: 60,
       },
       {
         name: 'SQL',
-        value: 75,
+        value: 80,
       },
       {
         name: 'NoSQL',
-        value: 75,
+        value: 60,
       },
       {
         name: 'Symfony',
-        value: 75,
+        value: 90,
       },
       {
         name: 'Ethereum',
@@ -179,19 +184,19 @@
     frontEndData: [
       {
         name: 'HTML/CSS',
-        value: 90,
+        value: 95,
       },
       {
         name: 'JavaScript',
-        value: 75,
+        value: 90,
       },
       {
         name: 'React',
-        value: 75,
+        value: 89,
       },
       {
         name: 'React Native',
-        value: 75,
+        value: 90,
       },
       {
         name: 'Tailwind',
@@ -199,11 +204,11 @@
       },
       {
         name: 'Sass',
-        value: 75,
+        value: 85,
       },
       {
         name: 'JQuery',
-        value: 75,
+        value: 80,
       }
     ],
     additionalSkillsData: {

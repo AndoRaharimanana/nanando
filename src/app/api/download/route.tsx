@@ -12,10 +12,6 @@ export async function GET(request: Request) {
     
     // Define a mapping of file extensions to content types
     const contentTypeMap: { [key: string]: string } = {
-      svg: 'image/svg+xml',
-      ico: 'image/x-icon',
-      png: 'image/png',
-      jpg: 'image/jpeg',
       pdf: 'application/pdf',
     };
 
