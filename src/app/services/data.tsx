@@ -109,7 +109,7 @@
         year: 'December 2021 - March 2023',
         poste: 'Remote Webmaster',
         company: {
-          logo: '/RAPP.jpg',
+          logo: '/rapp.png',
           name: 'RAPP',
           place: 'Mauritius',
           link: "https://www.rapp.com/"
