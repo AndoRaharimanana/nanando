@@ -54,7 +54,7 @@ export default function Home() {
       </div>
       <div className="flex items-center justify-between gap-12 py-c75 px-10" id="about">
         <div className='hidden md:flex flex-1 items-center justify-end'>
-          <Image src={"/guy-plaid-shirt.png"}
+          <Image src={"/cv/IMG_0166.PNG"}
                  width={300}
                  height={300}
                  alt="" />
@@ -69,14 +69,16 @@ export default function Home() {
               <span className={`${PoppinsSemiBold.className} flex flex-1 text-sm text-reniala-red`}>WHO AM I</span>
             </div>
             <div className='flex flex-1 items-center justify-end md:hidden pt-8'>
-              <Image src={"/guy-plaid-shirt.png"}
+              <Image src={"/cv/IMG_0166.PNG"}
                     width={300}
                     height={300}
                     alt="" />
             </div>
           </div>
-          <p className={`${Poppins.className} max-w-md text-justify`}>I am a full-stack mobile and web developer with experience in React Native, React, Symfony PHP, and Java. I’m professional, autonomous, and highly motivated, leveraging AI to streamline development and solve problems efficiently.
-          <p>I continuously strive to learn and improve, delivering high-quality solutions across diverse projects. Fluent in French and conversational in English, I am dedicated to pushing boundaries and contributing to the success of your projects through innovative development practices.</p></p>
+          <div className={`${Poppins.className} max-w-md text-justify`}>
+            <p>I am a full-stack mobile and web developer with experience in React Native, React, Symfony PHP, and Java. I’m professional, autonomous, and highly motivated, leveraging AI to streamline development and solve problems efficiently.</p>
+            <p>I continuously strive to learn and improve, delivering high-quality solutions across diverse projects. Fluent in French and conversational in English, I am dedicated to pushing boundaries and contributing to the success of your projects through innovative development practices.</p>
+          </div>
           <div className='flex items-start justify-center gap-7'>
             <a href="/api/download">
               <button
