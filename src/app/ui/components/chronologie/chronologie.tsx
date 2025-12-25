@@ -152,15 +152,13 @@ function Item({ data, side, dataOptional }: ItemProps) {
               {dataOptional.projects.map((item: any, index: number) => (
                 <div className="flex flex-row w-full gap-10">
                   <div className="flex flex-row gap-5">
-                    <div className="flex flex-col border-t border-solid border-nanando-grey items-center">
+                    <div className="flex flex-col border-t border-solid border-nanando-grey items-center min-w-[100px]">
+                      <span className="text-nanando-grey">{item.date}</span>
                       <span className="text-nanando-grey">
-                        {item.duration.split(" ")[0]}
-                      </span>
-                      <span className="text-nanando-grey">
-                        {item.duration.split(" ")[1]}
+                        ({item.duration})
                       </span>
                     </div>
-                    <span className="text-nanando-grey">{item.date}</span>
+
                     <Image
                       src={item.logo}
                       width={50}
