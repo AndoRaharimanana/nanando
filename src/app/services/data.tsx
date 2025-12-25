@@ -1,4 +1,50 @@
 const data = {
+  freelance: [
+    {
+      year: "July 2024 - by now",
+      poste: "Freelance",
+      company: {
+        logo: "/reniala.png",
+        name: "Reniala",
+        place: "Madagascar",
+        link: "https://ifoxcode.com/",
+      },
+      projects: [
+        {
+          name: "Legal Assist",
+          logo: "/projects/alphapest.png",
+          duration: "3 months",
+          date: "Aug 2025",
+          description:
+            "I spent 2 years as a full-stack mobile developer at iFoxCode (Mauritius), working remotely.",
+        },
+        {
+          name: "Antafondro",
+          logo: "/projects/antafondro.png",
+          duration: "2 months",
+          date: "Jun 2025",
+          description:
+            "I spent 2 years as a full-stack mobile developer at iFoxCode (Mauritius), working remotely.",
+        },
+        {
+          name: "Floraly Komba",
+          logo: "/projects/alphapest.png",
+          duration: "2 months",
+          date: "Mar 2025",
+          description:
+            "I spent 2 years as a full-stack mobile developer at iFoxCode (Mauritius), working remotely.",
+        },
+        {
+          name: "Bussiness Key Agency",
+          logo: "/projects/bk.png",
+          duration: "2 months",
+          date: "Jan 2025",
+          description:
+            "I spent 2 years as a full-stack mobile developer at iFoxCode (Mauritius), working remotely.",
+        },
+      ],
+    },
+  ],
   chronologie: [
     {
       year: "April 2023 - by now",
@@ -112,7 +158,7 @@ const data = {
       year: "December 2021 - March 2023",
       poste: "Remote Webmaster",
       company: {
-        logo: "/rapp.png",
+        logo: "/rapp.jpg",
         name: "RAPP",
         place: "Mauritius",
         link: "https://www.rapp.com/",

@@ -5,6 +5,7 @@ import data from "@/app/services/data";
 type ItemProps = {
   data: any;
   side: string;
+  dataOptional: any;
 };
 
 type CompanyInfoProps = {
@@ -37,7 +38,7 @@ function CompanyHeadline({
   );
 }
 
-function Item({ data, side }: ItemProps) {
+function Item({ data, side, dataOptional }: ItemProps) {
   return (
     <div className="flex md:items-center md:justify-center flex-col px-14 md:px-0 lg:px-36 relative">
       <div
@@ -108,167 +109,88 @@ function Item({ data, side }: ItemProps) {
           </a>
         </div>
       </div>
-      <div
-        className={`absolute flex flex-col w-full md:w-2/6 gap-5 border border-solid rounded-md border-nanando-grey p-4 ${
-          side == "right"
-            ? "md:self-start md:justify-self-start"
-            : "md:self-end md:justify-self-end"
-        }`}
-      >
-        <div className="relative">
-          <CompanyHeadline
-            year={"July 2024 - by now"}
-            poste={"Freelance"}
-            company={"Reniala"}
-            address={"Madagascar"}
-            side={side}
-          />
+      {dataOptional && (
+        <>
           <div
-            className={`absolute p-3 -top-36 ${
-              side == "right" ? "md:-left-8" : "md:-right-8 md:left-auto"
+            className={`absolute p-3 -top-16  ${
+              side == "right" ? "md:left-36" : "md:right-36 md:left-auto"
             }`}
           >
             <div
-              className={`p-3 border border-solid rounded-md border-nanando-grey bg-[#000] hover:scale-125 transition duration-500`}
+              className={`p-3 border border-double border-[5px] rounded-md border-nanando-grey/50 bg-nanando-grey/30 hover:scale-125 transition duration-500`}
             >
-              <a href={data.company.link} target="blank">
+              <a href={dataOptional.company.link} target="blank">
                 <Image
-                  src={data.company.logo}
+                  src={dataOptional.company.logo}
                   width={35}
                   height={35}
-                  alt={data.company.name}
+                  alt={dataOptional.company.name}
                   className="relative"
                 />
               </a>
             </div>
             <div className="h-36">
-              <div className="w-[50%] border-r border-solid border-nanando-grey h-36"></div>
+              <div className="w-[50%] border-r-[5px] border-double border-nanando-grey/50 h-36"></div>
               <div className="w-[50%] h-36"></div>
             </div>
           </div>
-        </div>
-        <div className="flex flex-col gap-5">
-          <div className="flex flex-row w-full gap-10">
-            <div className="flex flex-row gap-5">
-              <div className="flex flex-col border-t border-solid border-nanando-grey items-center">
-                <span className="text-nanando-grey">3</span>
-                <span className="text-nanando-grey">months</span>
-              </div>
-              <span className="text-nanando-grey">Aug 2025</span>
-              <a
-                href={data.company.link}
-                target="blank"
-                style={{ width: "35px", height: "35px" }}
-              >
-                <Image
-                  src={data.company.logo}
-                  width={35}
-                  height={35}
-                  alt={data.company.name}
-                  className="relative"
-                />
-              </a>
-            </div>
-            <div>
-              <span>
-                I spent 2 years as a full-stack mobile developer at iFoxCode
-                (Mauritius), working remotely.
-              </span>
-            </div>
-          </div>
-          <div className="flex flex-row w-full gap-10">
-            <div className="flex flex-row gap-5">
-              <div className="flex flex-col border-t border-solid border-nanando-grey items-center">
-                <span className="text-nanando-grey">2</span>
-                <span className="text-nanando-grey">months</span>
-              </div>
-              <span className="text-nanando-grey">Jun 2025</span>
-              <a
-                href={data.company.link}
-                target="blank"
-                style={{ width: "35px", height: "35px" }}
-              >
-                <Image
-                  src={data.company.logo}
-                  width={35}
-                  height={35}
-                  alt={data.company.name}
-                  className="relative"
-                />
-              </a>
-            </div>
-            <div>
-              <span>
-                I spent 2 years as a full-stack mobile developer at iFoxCode
-                (Mauritius), working remotely.
-              </span>
+          <div
+            className={`absolute flex flex-col w-full md:w-2/6 gap-5 border border-solid rounded-md border-nanando-grey/30 p-4 bg-nanando-grey/30 backdrop-blur-md z-[999] ${
+              side == "right"
+                ? "md:self-start md:justify-self-start"
+                : "md:self-end md:justify-self-end"
+            }`}
+          >
+            <CompanyHeadline
+              year={dataOptional.year}
+              poste={dataOptional.poste}
+              company={dataOptional.company.name}
+              address={dataOptional.company.place}
+              side={side}
+            />
+            <div className="flex flex-col gap-5">
+              {dataOptional.projects.map((item: any, index: number) => (
+                <div className="flex flex-row w-full gap-10">
+                  <div className="flex flex-row gap-5">
+                    <div className="flex flex-col border-t border-solid border-nanando-grey items-center">
+                      <span className="text-nanando-grey">
+                        {item.duration.split(" ")[0]}
+                      </span>
+                      <span className="text-nanando-grey">
+                        {item.duration.split(" ")[1]}
+                      </span>
+                    </div>
+                    <span className="text-nanando-grey">{item.date}</span>
+                    <Image
+                      src={item.logo}
+                      width={50}
+                      height={50}
+                      alt={item.name}
+                      className="relative bg-white rounded-md p-1"
+                      sizes=""
+                      style={{
+                        objectFit: "contain",
+                        maxWidth: "50px",
+                        maxHeight: "50px",
+                      }}
+                    />
+                  </div>
+                  <div>
+                    <span>{item.description}</span>
+                  </div>
+                </div>
+              ))}
             </div>
           </div>
-          <div className="flex flex-row w-full gap-10">
-            <div className="flex flex-row gap-5">
-              <div className="flex flex-col border-t border-solid border-nanando-grey items-center">
-                <span className="text-nanando-grey">2</span>
-                <span className="text-nanando-grey">months</span>
-              </div>
-              <span className="text-nanando-grey">Mar 2025</span>
-              <a
-                href={data.company.link}
-                target="blank"
-                style={{ width: "35px", height: "35px" }}
-              >
-                <Image
-                  src={data.company.logo}
-                  width={35}
-                  height={35}
-                  alt={data.company.name}
-                  className="relative"
-                />
-              </a>
-            </div>
-            <div>
-              <span>
-                I spent 2 years as a full-stack mobile developer at iFoxCode
-                (Mauritius), working remotely.
-              </span>
-            </div>
-          </div>
-          <div className="flex flex-row w-full gap-10">
-            <div className="flex flex-row gap-5">
-              <div className="flex flex-col border-t border-solid border-nanando-grey items-center">
-                <span className="text-nanando-grey">2</span>
-                <span className="text-nanando-grey">months</span>
-              </div>
-              <span className="text-nanando-grey">Jan 2025</span>
-              <a
-                href={data.company.link}
-                target="blank"
-                style={{ width: "35px", height: "35px" }}
-              >
-                <Image
-                  src={data.company.logo}
-                  width={35}
-                  height={35}
-                  alt={data.company.name}
-                  className="relative"
-                />
-              </a>
-            </div>
-            <div>
-              <span>
-                I spent 2 years as a full-stack mobile developer at iFoxCode
-                (Mauritius), working remotely.
-              </span>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div
-        className={`absolute flex flex-col w-full md:w-1/6 gap-5 border-t border-solid border-nanando-grey ${
-          side == "right"
-            ? "md:self-center md:justify-self-start right-[50%]"
-            : "md:self-end md:justify-self-end left-[50%]"
-        }`}
-      ></div>
+          <div
+            className={`absolute flex flex-col w-full md:w-1/6 gap-5 border-t-[5px] border-double border-nanando-grey/50 ${
+              side == "right"
+                ? "md:self-center md:justify-self-start right-[50%]"
+                : "md:self-end md:justify-self-end left-[50%]"
+            }`}
+          ></div>
+        </>
+      )}
     </div>
   );
 }
@@ -289,6 +211,7 @@ export default function Chronologie() {
             key={index}
             data={item}
             side={index % 2 === 0 ? "right" : "left"}
+            dataOptional={data.freelance[index]}
           />
         ))}
       </div>
