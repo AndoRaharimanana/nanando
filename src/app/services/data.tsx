@@ -12,35 +12,32 @@ const data = {
       projects: [
         {
           name: "Legal Assist",
-          logo: "/projects/alphapest.png",
+          logo: "/projects/Legal_Assist_Logo.jpg",
           duration: "3 months",
           date: "Aug 2025",
-          description:
-            "I spent 2 years as a full-stack mobile developer at iFoxCode (Mauritius), working remotely.",
+          description: "Website redesign, refont, SEO, and implementation.",
         },
         {
           name: "Antafondro",
           logo: "/projects/antafondro.png",
           duration: "2 months",
           date: "Jun 2025",
-          description:
-            "I spent 2 years as a full-stack mobile developer at iFoxCode (Mauritius), working remotely.",
+          description: "Website redesign, refont, SEO, and implementation.",
         },
         {
           name: "Floraly Komba",
-          logo: "/projects/alphapest.png",
+          logo: "/projects/Floraly-Komba.jpg",
           duration: "2 months",
           date: "Mar 2025",
           description:
-            "I spent 2 years as a full-stack mobile developer at iFoxCode (Mauritius), working remotely.",
+            "Website redesign, refont, SEO, implementation and production launch.",
         },
         {
-          name: "Bussiness Key Agency",
+          name: "Business Key Agency",
           logo: "/projects/bk.png",
           duration: "2 months",
           date: "Jan 2025",
-          description:
-            "I spent 2 years as a full-stack mobile developer at iFoxCode (Mauritius), working remotely.",
+          description: "UI/UX design creation and website implementation.",
         },
       ],
     },
@@ -101,6 +98,10 @@ const data = {
         {
           name: "Sesame",
           logo: "/projects/sesame.png",
+        },
+        {
+          name: "Mothair",
+          logo: "/projects/mothair.png",
         },
       ],
     },

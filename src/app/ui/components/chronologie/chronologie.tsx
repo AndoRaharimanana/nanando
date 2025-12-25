@@ -174,7 +174,10 @@ function Item({ data, side, dataOptional }: ItemProps) {
                     />
                   </div>
                   <div>
-                    <span>{item.description}</span>
+                    <span>
+                      <span className="text-reniala-red/80">{item.name}: </span>
+                      {item.description}
+                    </span>
                   </div>
                 </div>
               ))}
