@@ -38,6 +38,83 @@ function CompanyHeadline({
   );
 }
 
+function OptionalSection({ data, side }: { data: any; side: string }) {
+  return (
+    <>
+      <div
+        className={`absolute p-3 -top-16  ${
+          side == "right" ? "md:left-36" : "md:right-36 md:left-auto"
+        }`}
+      >
+        <div
+          className={`p-3 border border-double border-[5px] rounded-md border-nanando-grey/50 bg-nanando-grey/30 hover:scale-125 transition duration-500`}
+        >
+          <a href={data.company.link} target="blank">
+            <Image
+              src={data.company.logo}
+              width={35}
+              height={35}
+              alt={data.company.name}
+              className="relative"
+            />
+          </a>
+        </div>
+        <div className="h-36">
+          <div className="w-[50%] border-r-[5px] border-double border-nanando-grey/50 h-36"></div>
+          <div className="w-[50%] h-36"></div>
+        </div>
+      </div>
+      <div
+        className={`absolute flex flex-col w-full md:w-2/6 gap-5 border border-solid rounded-md border-nanando-grey/30 p-4 bg-nanando-grey/30 backdrop-blur-md z-[999] ${
+          side == "right"
+            ? "md:self-start md:justify-self-start"
+            : "md:self-end md:justify-self-end"
+        }`}
+      >
+        <CompanyHeadline
+          year={data.year}
+          poste={data.poste}
+          company={data.company.name}
+          address={data.company.place}
+          side={side}
+        />
+        <div className="flex flex-col gap-5">
+          {data.projects.map((item: any, index: number) => (
+            <div className="flex flex-row w-full gap-10">
+              <div className="flex flex-row gap-5">
+                <div className="flex flex-col border-t border-solid border-nanando-grey items-center min-w-[100px]">
+                  <span className="text-nanando-grey">{item.date}</span>
+                  <span className="text-nanando-grey">({item.duration})</span>
+                </div>
+
+                <Image
+                  src={item.logo}
+                  width={50}
+                  height={50}
+                  alt={item.name}
+                  className="relative bg-white rounded-md p-1"
+                  sizes=""
+                  style={{
+                    objectFit: "contain",
+                    maxWidth: "50px",
+                    maxHeight: "50px",
+                  }}
+                />
+              </div>
+              <div>
+                <span>
+                  <span className="text-reniala-red/80">{item.name}: </span>
+                  {item.description}
+                </span>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </>
+  );
+}
+
 function Item({ data, side, dataOptional }: ItemProps) {
   return (
     <div className="flex md:items-center md:justify-center flex-col px-14 md:px-0 lg:px-36 relative">
@@ -109,37 +186,17 @@ function Item({ data, side, dataOptional }: ItemProps) {
           </a>
         </div>
       </div>
+
       {dataOptional && (
         <>
           <div
-            className={`absolute p-3 -top-16  ${
-              side == "right" ? "md:left-36" : "md:right-36 md:left-auto"
-            }`}
-          >
-            <div
-              className={`p-3 border border-double border-[5px] rounded-md border-nanando-grey/50 bg-nanando-grey/30 hover:scale-125 transition duration-500`}
-            >
-              <a href={dataOptional.company.link} target="blank">
-                <Image
-                  src={dataOptional.company.logo}
-                  width={35}
-                  height={35}
-                  alt={dataOptional.company.name}
-                  className="relative"
-                />
-              </a>
-            </div>
-            <div className="h-36">
-              <div className="w-[50%] border-r-[5px] border-double border-nanando-grey/50 h-36"></div>
-              <div className="w-[50%] h-36"></div>
-            </div>
-          </div>
-          <div
-            className={`absolute flex flex-col w-full md:w-2/6 gap-5 border border-solid rounded-md border-nanando-grey/30 p-4 bg-nanando-grey/30 backdrop-blur-md z-[999] ${
-              side == "right"
-                ? "md:self-start md:justify-self-start"
-                : "md:self-end md:justify-self-end"
-            }`}
+            className={`bg-nanando-grey/30 absolute           
+           ${
+             side == "right"
+               ? "md:self-center md:justify-self-start right-[55%]"
+               : "md:self-end md:justify-self-end left-[55%]"
+           }
+             p-5 rounded-md flex flex-col items-center z-[999] backdrop-blur-md`}
           >
             <CompanyHeadline
               year={dataOptional.year}
@@ -148,40 +205,7 @@ function Item({ data, side, dataOptional }: ItemProps) {
               address={dataOptional.company.place}
               side={side}
             />
-            <div className="flex flex-col gap-5">
-              {dataOptional.projects.map((item: any, index: number) => (
-                <div className="flex flex-row w-full gap-10">
-                  <div className="flex flex-row gap-5">
-                    <div className="flex flex-col border-t border-solid border-nanando-grey items-center min-w-[100px]">
-                      <span className="text-nanando-grey">{item.date}</span>
-                      <span className="text-nanando-grey">
-                        ({item.duration})
-                      </span>
-                    </div>
-
-                    <Image
-                      src={item.logo}
-                      width={50}
-                      height={50}
-                      alt={item.name}
-                      className="relative bg-white rounded-md p-1"
-                      sizes=""
-                      style={{
-                        objectFit: "contain",
-                        maxWidth: "50px",
-                        maxHeight: "50px",
-                      }}
-                    />
-                  </div>
-                  <div>
-                    <span>
-                      <span className="text-reniala-red/80">{item.name}: </span>
-                      {item.description}
-                    </span>
-                  </div>
-                </div>
-              ))}
-            </div>
+            <span className="text-reniala-red/80">{`Expand +`}</span>
           </div>
           <div
             className={`absolute flex flex-col w-full md:w-1/6 gap-5 border-t-[5px] border-double border-nanando-grey/50 ${
@@ -191,6 +215,7 @@ function Item({ data, side, dataOptional }: ItemProps) {
             }`}
           ></div>
         </>
+        /*dataOptional && <OptionalSection data={dataOptional} side={side} />*/
       )}
     </div>
   );
