@@ -39,24 +39,16 @@ function CompanyHeadline({
   );
 }
 
-function OptionalSection({
-  data,
-  side,
-  hide,
-  className,
-}: {
-  data: any;
-  side: string;
-  hide: MouseEventHandler<HTMLButtonElement>;
-  className?: string;
-}) {
+function OptionalSection({ data, side }: { data: any; side: string }) {
+  const [opened, setOpened] = useState(true);
   return (
     <>
       <div
         className={`absolute p-3 -top-16 transition-all duration-500 ease-out ${
           side == "right" ? "md:left-36" : "md:right-36 md:left-auto"
         }
-        ${className}`}
+         ${opened ? "block" : "hidden"}
+        `}
       >
         <div
           className={`p-3 border border-double border-[5px] rounded-md border-nanando-grey/50 bg-nanando-grey/30 hover:scale-125 transition duration-500`}
@@ -77,26 +69,69 @@ function OptionalSection({
         </div>
       </div>
       <div
-        className={`absolute flex flex-col w-full md:w-2/6 gap-5 border border-solid rounded-md border-nanando-grey/30 p-4 bg-nanando-grey/30 backdrop-blur-md z-[999] ${
+        className={`absolute flex flex-col rounded-md p-5 bg-nanando-grey/30 backdrop-blur-md z-[999] ${
           side == "right"
-            ? "md:self-start md:justify-self-start"
-            : "md:self-end md:justify-self-end"
+            ? opened
+              ? "md:self-start md:justify-self-start"
+              : "md:self-center md:justify-self-start right-[55%]"
+            : opened
+            ? "md:self-end md:justify-self-end"
+            : "md:self-end md:justify-self-end left-[55%]"
         }
-        ${className}`}
+              ${
+                opened
+                  ? "w-full md:w-2/6 gap-5 border border-solid border-nanando-grey/30"
+                  : "items-center "
+              }`}
       >
-        <div className="flex flex-row place-content-between">
-          <CompanyHeadline
-            year={data.year}
-            poste={data.poste}
-            company={data.company.name}
-            address={data.company.place}
-            side={side}
-          />
-          <button onClick={hide} className="self-start">
-            <span className="text-reniala-red/80">{`Minimize -`}</span>
+        <div
+          className={`flex
+          ${
+            opened ? "flex-row place-content-between" : "flex-col items-center"
+          }`}
+        >
+          <div className="flex gap-3">
+            <a
+              href={data.company.link}
+              target="blank"
+              className={`
+          ${opened ? "hidden" : "block"}`}
+            >
+              <Image
+                src={data.company.logo}
+                width={35}
+                height={35}
+                alt={data.company.name}
+                className="relative"
+              />
+            </a>
+            <CompanyHeadline
+              year={data.year}
+              poste={data.poste}
+              company={data.company.name}
+              address={data.company.place}
+              side={side}
+            />
+          </div>
+          <button
+            onClick={() => setOpened(!opened)}
+            className={`  
+              ${opened ? "self-start" : "self-center"}
+              `}
+          >
+            <span className="text-reniala-red/80">{`${
+              opened ? "Minimize -" : "Expand +"
+            }`}</span>
           </button>
         </div>
-        <div className="flex flex-col gap-5">
+        <div
+          className={`flex-col gap-5
+          ${
+            opened
+              ? "flex opacity-100 translate-y-0"
+              : "hidden opacity-0 translate-y-6"
+          }`}
+        >
           {data.projects.map((item: any, index: number) => (
             <div className="flex flex-row w-full gap-10">
               <div className="flex flex-row gap-5">
@@ -129,61 +164,7 @@ function OptionalSection({
           ))}
         </div>
       </div>
-    </>
-  );
-}
 
-function Optional({ data, side }: { data: any; side: string }) {
-  const [opened, setOpened] = useState(false);
-  return (
-    <>
-      <OptionalSection
-        data={data}
-        side={side}
-        hide={() => setOpened(false)}
-        className={`          ${
-          opened
-            ? "opacity-100 translate-y-0"
-            : "hidden opacity-0 translate-y-6"
-        }`}
-      />
-      <div
-        className={`bg-nanando-grey/30 absolute transition delay-150 duration-300 ease-in-out          
-           ${
-             side == "right"
-               ? "md:self-center md:justify-self-start right-[55%]"
-               : "md:self-end md:justify-self-end left-[55%]"
-           }
-             p-5 rounded-md flex-col items-center z-[999] backdrop-blur-md
-          ${
-            opened
-              ? "hidden opacity-0 translate-y-6"
-              : "flex opacity-100 translate-y-0"
-          }
-           `}
-      >
-        <div className="flex gap-3">
-          <a href={data.company.link} target="blank">
-            <Image
-              src={data.company.logo}
-              width={35}
-              height={35}
-              alt={data.company.name}
-              className="relative"
-            />
-          </a>
-          <CompanyHeadline
-            year={data.year}
-            poste={data.poste}
-            company={data.company.name}
-            address={data.company.place}
-            side={side}
-          />
-        </div>
-        <button onClick={() => setOpened(true)}>
-          <span className="text-reniala-red/80">{`Expand +`}</span>
-        </button>
-      </div>
       <div
         className={`absolute flex flex-col w-full md:w-1/6 gap-5 border-t-[5px] border-double border-nanando-grey/50 ${
           side == "right"
@@ -267,7 +248,7 @@ function Item({ data, side, dataOptional }: ItemProps) {
         </div>
       </div>
 
-      {dataOptional && <Optional data={dataOptional} side={side} />}
+      {dataOptional && <OptionalSection data={dataOptional} side={side} />}
     </div>
   );
 }
