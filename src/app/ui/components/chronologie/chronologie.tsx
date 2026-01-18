@@ -143,7 +143,7 @@ function OptionalSection({ data, side }: { data: any; side: string }) {
           }`}
         >
           {data.projects.map((item: any, index: number) => (
-            <div className="flex flex-row w-full gap-10">
+            <div className="flex flex-row w-full gap-10" key={`prj-${index}`}>
               <div className="flex flex-row gap-5">
                 <div className="flex flex-col border-t border-solid border-nanando-grey items-center min-w-[100px]">
                   <span className="text-nanando-grey">{item.date}</span>
