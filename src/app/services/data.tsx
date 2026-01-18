@@ -7,7 +7,7 @@ const data = {
         logo: "/reniala.png",
         name: "Reniala",
         place: "Madagascar",
-        link: "https://ifoxcode.com/",
+        link: "https://www.facebook.com/p/Reniala-61561378067836/",
       },
       projects: [
         {

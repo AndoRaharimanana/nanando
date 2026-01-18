@@ -109,8 +109,7 @@ export default function CustomSlider({ value, changeData }: CustomSliderProps) {
           My skills
         </span>
         <span className="text-center">
-          Développeur orienté solutions, avec une solide expérience en web et
-          mobile.
+          Solution-oriented developer with solid experience in web and mobile.
         </span>
         <span
           className={`${PoppinsBold.className} text-7xl absolute text-nanando-soft-grey z-[-1]`}
@@ -151,7 +150,7 @@ export default function CustomSlider({ value, changeData }: CustomSliderProps) {
                 className="bg-nanando-white rounded-full p-3 hover:scale-110"
                 alt=""
               />
-            )
+            ),
           )}
           {data.additionalSkillsData.noPhoto.map((item: any, index: number) => (
             <span
