@@ -48,12 +48,12 @@ const data = {
       poste: "Remote Fullstack Symfony/React/React Native",
       company: {
         logo: "/ifoxcode.png",
-        name: "Ifoxcode",
+        name: "Ifoxcode via BICI",
         place: "Mauritius",
         link: "https://ifoxcode.com/",
       },
       description:
-        "I spent 2 years as a full-stack mobile developer at iFoxCode (Mauritius), working remotely. My role involved building Android and iOS mobile apps using React Native, developing backend APIs with Symfony, and redesigning and creating web applications with React. My experience there allowed me to contribute to diverse projects, handling both frontend and backend tasks to deliver complete solutions on several projects.",
+        "I spent 3 years as a full-stack mobile developer at iFoxCode (Mauritius), working remotely. My role involved building Android and iOS mobile apps using React Native, developing backend APIs with Symfony, and redesigning and creating web applications with React. My experience there allowed me to contribute to diverse projects, handling both frontend and backend tasks to deliver complete solutions on several projects.",
       projects: [
         {
           name: "AlphaPest Management",
@@ -115,7 +115,7 @@ const data = {
         link: "https://bici.mg/",
       },
       description:
-        "I spent 3 years as a Java developer at BICI, working on-site. My responsibilities included debugging and fixing issues for web applications, developing backend solutions, and reporting customer feedback. I also proposed solutions based on this feedback and trained customers on how to effectively use the applications. This experience sharpened my problem-solving skills and deepened my expertise in backend development.",
+        "I spent 4 years as a Java developer at BICI, working on-site. My responsibilities included debugging and fixing issues for web applications, developing backend solutions, and reporting customer feedback. I also proposed solutions based on this feedback and trained customers on how to effectively use the applications. This experience sharpened my problem-solving skills and deepened my expertise in backend development.",
       projects: [
         {
           name: "Agence de transport terrestres (ATT)",
@@ -160,7 +160,7 @@ const data = {
       poste: "Remote Webmaster",
       company: {
         logo: "/rapp.jpg",
-        name: "RAPP",
+        name: "RAPP via BICI",
         place: "Mauritius",
         link: "https://www.rapp.com/",
       },
