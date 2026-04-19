@@ -52,6 +52,7 @@ function CompanyHeadline({
 
 function OptionalSection({ data, side }: { data: any; side: string }) {
   const [opened, setOpened] = useState(false);
+  const isTouchDevice = () => window.matchMedia("(hover: none)").matches;
   return (
     <>
       <div
@@ -83,18 +84,19 @@ function OptionalSection({ data, side }: { data: any; side: string }) {
         </div>
       </div>
       <div
-        onMouseEnter={() => setOpened(true)}
-        onMouseLeave={() => setOpened(false)}
-        className={`absolute flex flex-col rounded-md p-5 bg-nanando-grey/30 backdrop-blur-md z-[999]
-          transition-all duration-700
+        onMouseEnter={() => !isTouchDevice() && setOpened(true)}
+        onMouseLeave={() => !isTouchDevice() && setOpened(false)}
+        onClick={() => isTouchDevice() && setOpened((prev) => !prev)}
+        className={`relative md:absolute flex flex-col rounded-md p-5 bg-nanando-grey/30 overflow-hidden backdrop-blur-md z-[999]
+          transition-all duration-700 mt-8 md:mt-0 mb-8 md:mb-0
           ${
             side == "right"
               ? opened
-                ? "md:self-start md:justify-self-start right-[55%]"
-                : "md:self-center md:justify-self-start right-[55%]"
+                ? "md:self-start md:justify-self-start md:right-[55%]"
+                : "md:self-center md:justify-self-start md:right-[55%]"
               : opened
-                ? "md:self-end md:justify-self-end left-[55%]"
-                : "md:self-end md:justify-self-end left-[55%]"
+                ? "md:self-end md:justify-self-end md:left-[55%]"
+                : "md:self-end md:justify-self-end md:left-[55%]"
           }
               ${
                 opened
@@ -114,7 +116,7 @@ function OptionalSection({ data, side }: { data: any; side: string }) {
               href={data.company.link}
               target="blank"
               className={`transition-all duration-700
-          ${opened ? "opacity-0 scale-0 w-0" : "opacity-100 scale-100 w-[35px]"}`}
+          ${opened ? "md:opacity-0 md:scale-0 md:w-0" : "opacity-100 scale-100 w-[35px]"}`}
             >
               <Image
                 src={data.company.logo}
@@ -176,10 +178,10 @@ function OptionalSection({ data, side }: { data: any; side: string }) {
       </div>
 
       <div
-        className={`absolute flex flex-col w-full md:w-1/6 gap-5 border-t-[5px] border-double border-nanando-grey/50 ${
+        className={`absolute hidden md:flex flex-col w-full md:w-1/6 gap-5 border-t-[5px] border-double border-nanando-grey/50 ${
           side == "right"
-            ? "md:self-center md:justify-self-start right-[50%]"
-            : "md:self-end md:justify-self-end left-[50%]"
+            ? "md:self-center md:justify-self-start md:right-[50%]"
+            : "md:self-end md:justify-self-end md:left-[50%]"
         }`}
       ></div>
     </>
