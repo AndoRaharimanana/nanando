@@ -1,7 +1,7 @@
 import { PoppinsBold, PoppinsSemiBold } from "../../font";
 import { Slider } from "rsuite";
 import Image from "next/image";
-import data from "@/app/services/data";
+import data from "@/app/data/common";
 
 type ProgressProps = {
   value: number;

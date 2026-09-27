@@ -1,0 +1,34 @@
+{
+  "Navigation": {
+    "home": "Home",
+    "about": "About",
+    "experience": "Experience",
+    "formation": "Formation",
+    "skills": "Skills",
+    "contact": "Let's talk"
+  },
+  "About": {
+    "title": "About me",
+    "subtitle": "Who am i"
+  },
+  "Experience": {
+    "title": "Experiences"
+  },
+  "Formation": {
+    "title": "Formation",
+    "subtitle": "Experience"
+  },
+  "Skills": {
+    "title": "My skills",
+    "subtitle": "Skills",
+    "more": "Additional skills"
+  },
+  "Contact": {
+    "title": "Contact me"
+  },
+  "Common": {
+    "downloadBtn": "Download resume",
+    "cta": "Contact me",
+    "websiteInfo": "Website made with"
+  }
+}

@@ -1,6 +1,6 @@
 import { PoppinsSemiBold, Lora } from "../../font";
 import Image from "next/image";
-import data from "@/app/services/data";
+import data from "@/app/data/common";
 
 function Item({ data }: any) {
   return (

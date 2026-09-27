@@ -1,6 +1,6 @@
 import { PoppinsSemiBold, Lora } from "../../font";
 import Image from "next/image";
-import data from "@/app/services/data";
+import data from "@/app/data/common";
 import React, { MouseEventHandler, useState } from "react";
 
 type ItemProps = {
