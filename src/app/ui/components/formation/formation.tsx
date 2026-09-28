@@ -40,7 +40,7 @@ function Item({ data }: any) {
 export default function Formation() {
   const locale = useLocale();
   const t = useTranslations();
-  const data = getData(locale);
+  const data = getData(locale as Parameters<typeof getData>[0]);
   return (
     <div
       className="flex flex-1 items-center justify-center flex-col gap-7 px-14 lg:px-36 py-c75"

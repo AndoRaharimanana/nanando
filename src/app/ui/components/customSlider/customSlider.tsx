@@ -1,3 +1,5 @@
+"use client";
+import React, { useState } from "react";
 import { PoppinsBold, PoppinsSemiBold } from "../../font";
 import { Slider } from "rsuite";
 import Image from "next/image";
@@ -99,10 +101,11 @@ function Item({ name, value, side, data }: ItemProps) {
     </div>
   );
 }
-export default function CustomSlider({ value, changeData }: CustomSliderProps) {
+export default function CustomSlider() {
+  const [value, setValue] = useState(50);
   const locale = useLocale();
   const t = useTranslations();
-  const data = getData(locale);
+  const data = getData(locale as Parameters<typeof getData>[0]);
   return (
     <div
       className="flex flex-1 items-center justify-start md:justify-center flex-col gap-7 mx-14 lg:mx-36 min-h-[650px] md:min-h-fit py-c75"
@@ -128,7 +131,7 @@ export default function CustomSlider({ value, changeData }: CustomSliderProps) {
           data={data.frontEndData}
         />
         <div className="w-full absolute top-1/2">
-          <Slider defaultValue={value} onChange={changeData} tooltip={false} />
+          <Slider defaultValue={value} onChange={setValue} tooltip={false} />
         </div>
       </div>
       <div className="flex flex-col w-full items-center justify-center pt-16">

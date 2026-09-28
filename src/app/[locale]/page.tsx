@@ -13,7 +13,6 @@ import {
 import Navigation from "../ui/components/navigation";
 import SocialLinks from "../ui/components/socialLinks";
 import Image from "next/image";
-import React, { useState } from "react";
 import Chronologie from "../ui/components/chronologie/chronologie";
 import Formation from "../ui/components/formation/formation";
 import CustomSlider from "../ui/components/customSlider/customSlider";
@@ -24,14 +23,10 @@ import GitHubCalendar from "react-github-calendar";
 
 config.autoAddCss = false;
 
-export default async function Home() {
+export default function Home() {
   const locale = useLocale();
   const t = useTranslations();
-  const data = getData(locale);
-  const [value, setValue] = useState(50);
-  const changeData = (value: number) => {
-    setValue(value);
-  };
+  const data = getData(locale as Parameters<typeof getData>[0]);
   return (
     <main className="pb-c75">
       <div
@@ -133,7 +128,7 @@ export default async function Home() {
       </div>
       <Chronologie />
       <Formation />
-      <CustomSlider value={value} changeData={changeData} />
+      <CustomSlider />
       <div className="flex flex-1 flex-col md:flex-row items-center justify-center gap-7 px-14 lg:px-36 py-c75">
         <span className={`${PoppinsSemiBold.className} text-xl mb-4`}>
           {t("Common.websiteInfo")}:{" "}

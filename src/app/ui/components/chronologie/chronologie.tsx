@@ -268,7 +268,7 @@ function Item({ data, side, dataOptional }: ItemProps) {
 export default function Chronologie() {
   const locale = useLocale();
   const t = useTranslations();
-  const data = getData(locale);
+  const data = getData(locale as Parameters<typeof getData>[0]);
 
   return (
     <div
