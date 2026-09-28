@@ -1,5 +1,6 @@
 import { PoppinsSemiBold, Lora } from "../../font";
 import Image from "next/image";
+import { useTranslations } from "next-intl";
 import data from "@/app/data/common";
 import React, { MouseEventHandler, useState } from "react";
 
@@ -265,14 +266,15 @@ function Item({ data, side, dataOptional }: ItemProps) {
   );
 }
 export default function Chronologie() {
+  const t = useTranslations();
   return (
     <div
       className="flex flex-1 items-center justify-center flex-col gap-7 py-c75"
       id="experience"
     >
       <div className="flex items-center justify-center flex-col">
-        <span className={`${PoppinsSemiBold.className} text-3xl`}>
-          EXPERIENCES
+        <span className={`${PoppinsSemiBold.className} text-3xl uppercase`}>
+          {t("Experience.title")}
         </span>
       </div>
       <div>

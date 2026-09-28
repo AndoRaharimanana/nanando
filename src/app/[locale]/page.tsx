@@ -1,5 +1,6 @@
 "use client";
 import { config } from "@fortawesome/fontawesome-svg-core";
+import { useTranslations } from "next-intl";
 import Banner from "../ui/components/banner";
 import {
   Lora,
@@ -24,6 +25,7 @@ import data from "../data/common";
 config.autoAddCss = false;
 
 export default function Home() {
+  const t = useTranslations();
   const [value, setValue] = useState(50);
   const changeData = (value: number) => {
     setValue(value);
@@ -81,17 +83,17 @@ export default function Home() {
         </div>
         <div className="flex flex-1 items-center md:items-start justify-center flex-col gap-7">
           <div className="flex items-start justify-center flex-col">
-            <span className={`${PoppinsSemiBold.className} text-3xl`}>
-              ABOUT ME
+            <span className={`${PoppinsSemiBold.className} text-3xl uppercase`}>
+              {t("About.title")}
             </span>
             <div className="flex w-full gap-2.5">
               <div className="flex flex-1 items-center justify-between">
                 <hr className="flex flex-1 bg-nanando-white h-0.5"></hr>
               </div>
               <span
-                className={`${PoppinsSemiBold.className} flex flex-1 text-sm text-reniala-red`}
+                className={`${PoppinsSemiBold.className} flex flex-1 text-sm text-reniala-red uppercase`}
               >
-                WHO AM I
+                {t("About.subtitle")}
               </span>
             </div>
             <div className="flex flex-1 items-center justify-end md:hidden pt-8">
@@ -124,7 +126,7 @@ export default function Home() {
                 type="button"
                 className={`${PoppinsSemiBold.className} inline-block rounded px-4 lg:px-6 py-4 text-xs uppercase text-white bg-reniala-red hover:-translate-y-1 hover:bg-reniala-red-dark transition ease-in-out delay-150 duration-300`}
               >
-                Download resume
+                {t("Common.downloadBtn")}
               </button>
             </a>
             <a href="#contact">
@@ -132,7 +134,7 @@ export default function Home() {
                 type="button"
                 className={`${PoppinsSemiBold.className} inline-block rounded px-4 lg:px-6 py-4 text-xs uppercase text-white bg-reniala-red hover:-translate-y-1 hover:bg-reniala-red-dark transition ease-in-out delay-150 duration-300`}
               >
-                Contact me
+                {t("Common.cta")}
               </button>
             </a>
           </div>
@@ -143,7 +145,7 @@ export default function Home() {
       <CustomSlider value={value} changeData={changeData} />
       <div className="flex flex-1 flex-col md:flex-row items-center justify-center gap-7 px-14 lg:px-36 py-c75">
         <span className={`${PoppinsSemiBold.className} text-xl mb-4`}>
-          Website made with:{" "}
+          {t("Common.websiteInfo")}:{" "}
         </span>
         <div className="flex justify-center w-full gap-10">
           <Image
@@ -192,8 +194,8 @@ export default function Home() {
         id="contact"
       >
         <div className="flex items-center justify-center flex-col">
-          <span className={`${PoppinsSemiBold.className} text-3xl`}>
-            CONTACT ME
+          <span className={`${PoppinsSemiBold.className} text-3xl uppercase`}>
+            {t("Contact.title")}
           </span>
         </div>
         <div className="flex flex-col md:flex-row items-center justify-between w-full gap-base md:gap-0">

@@ -1,8 +1,10 @@
 import React, { useState } from "react";
+import { useTranslations } from "next-intl";
 import { Poppins, PoppinsSemiBold, Lora } from "../font";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars, faXmark } from "@fortawesome/free-solid-svg-icons";
 import SocialLinks from "./socialLinks";
+import LanguageSwitcher from "./languageSwitcher";
 import { faWhatsapp } from "@fortawesome/free-brands-svg-icons";
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import data from "@/app/data/common";
@@ -13,6 +15,7 @@ type MenuProps = {
 };
 
 function Menu({ displayMobileMenu, setDisplayMobileMenu }: MenuProps) {
+  const t = useTranslations();
   const clickMobileMenu = () => {
     if (displayMobileMenu) {
       setDisplayMobileMenu(!displayMobileMenu);
@@ -27,7 +30,7 @@ function Menu({ displayMobileMenu, setDisplayMobileMenu }: MenuProps) {
           className="hover:text-reniala-red active:text-reniala-red hover:decoration-solid transition duration-300"
           href="#home"
         >
-          Home
+          {t("Navigation.home")}
         </a>
       </li>
       <li>
@@ -36,7 +39,7 @@ function Menu({ displayMobileMenu, setDisplayMobileMenu }: MenuProps) {
           className="hover:text-reniala-red active:text-reniala-red hover:decoration-solid transition duration-300"
           href="#about"
         >
-          About
+          {t("Navigation.about")}
         </a>
       </li>
       <li>
@@ -45,7 +48,7 @@ function Menu({ displayMobileMenu, setDisplayMobileMenu }: MenuProps) {
           className="hover:text-reniala-red active:text-reniala-red hover:decoration-solid transition duration-300"
           href="#experience"
         >
-          Experience
+          {t("Navigation.experience")}
         </a>
       </li>
       <li>
@@ -54,7 +57,7 @@ function Menu({ displayMobileMenu, setDisplayMobileMenu }: MenuProps) {
           className="hover:text-reniala-red active:text-reniala-red hover:decoration-solid transition duration-300"
           href="#formation"
         >
-          Formation
+          {t("Navigation.formation")}
         </a>
       </li>
       <li>
@@ -63,7 +66,7 @@ function Menu({ displayMobileMenu, setDisplayMobileMenu }: MenuProps) {
           className="hover:text-reniala-red active:text-reniala-red hover:decoration-solid transition duration-300"
           href="#skills"
         >
-          Skills
+          {t("Navigation.skills")}
         </a>
       </li>
       <li>
@@ -72,8 +75,11 @@ function Menu({ displayMobileMenu, setDisplayMobileMenu }: MenuProps) {
           className="hover:text-reniala-red active:text-reniala-red hover:decoration-solid transition duration-300"
           href="#contact"
         >
-          Let's talk
+          {t("Navigation.contact")}
         </a>
+      </li>
+      <li className="rotate-180">
+        <LanguageSwitcher />
       </li>
     </>
   );

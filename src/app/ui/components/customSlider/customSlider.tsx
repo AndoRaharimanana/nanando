@@ -1,6 +1,7 @@
 import { PoppinsBold, PoppinsSemiBold } from "../../font";
 import { Slider } from "rsuite";
 import Image from "next/image";
+import { useTranslations } from "next-intl";
 import data from "@/app/data/common";
 
 type ProgressProps = {
@@ -99,6 +100,7 @@ function Item({ name, value, side, data }: ItemProps) {
   );
 }
 export default function CustomSlider({ value, changeData }: CustomSliderProps) {
+  const t = useTranslations();
   return (
     <div
       className="flex flex-1 items-center justify-start md:justify-center flex-col gap-7 mx-14 lg:mx-36 min-h-[650px] md:min-h-fit py-c75"
@@ -106,7 +108,7 @@ export default function CustomSlider({ value, changeData }: CustomSliderProps) {
     >
       <div className="relative flex items-center justify-center flex-col gap-4">
         <span className={`${PoppinsSemiBold.className} text-3xl`}>
-          My skills
+          {t("Skills.title")}
         </span>
         <span className="text-center">
           Solution-oriented developer with solid experience in web and mobile.
@@ -114,7 +116,7 @@ export default function CustomSlider({ value, changeData }: CustomSliderProps) {
         <span
           className={`${PoppinsBold.className} text-7xl absolute text-nanando-soft-grey z-[-1]`}
         >
-          Skills
+          {t("Skills.subtitle")}
         </span>
       </div>
       <div className="relative flex item-between justify-between w-full h-c575 md:h-c17">
@@ -131,7 +133,7 @@ export default function CustomSlider({ value, changeData }: CustomSliderProps) {
       </div>
       <div className="flex flex-col w-full items-center justify-center pt-16">
         <span className={`${PoppinsSemiBold.className} text-xl mb-4`}>
-          Additional skills
+          {t("Skills.more")}
         </span>
         <div className="flex items-center justify-between md:justify-center flex-wrap gap-4 md:gap-10">
           {data.additionalSkillsData.withPhoto.map(

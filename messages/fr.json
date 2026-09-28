@@ -1,34 +1,34 @@
 {
   "Navigation": {
-    "home": "Home",
-    "about": "About",
-    "experience": "Experience",
+    "home": "Accueil",
+    "about": "À propos",
+    "experience": "Expérience",
     "formation": "Formation",
-    "skills": "Skills",
-    "contact": "Let's talk"
+    "skills": "Compétences",
+    "contact": "Parlons-en"
   },
   "About": {
-    "title": "About me",
-    "subtitle": "Who am i"
+    "title": "À propos de moi",
+    "subtitle": "Qui suis-je"
   },
   "Experience": {
-    "title": "Experiences"
+    "title": "Expériences"
   },
   "Formation": {
     "title": "Formation",
-    "subtitle": "Experience"
+    "subtitle": "Expérience"
   },
   "Skills": {
-    "title": "My skills",
-    "subtitle": "Skills",
-    "more": "Additional skills"
+    "title": "Mes compétences",
+    "subtitle": "Compétences",
+    "more": "Compétences supplémentaires"
   },
   "Contact": {
-    "title": "Contact me"
+    "title": "Contactez-moi"
   },
   "Common": {
-    "downloadBtn": "Download resume",
-    "cta": "Contact me",
-    "websiteInfo": "Website made with"
+    "downloadBtn": "Télécharger le CV",
+    "cta": "Contactez-moi",
+    "websiteInfo": "Site réalisé avec"
   }
 }

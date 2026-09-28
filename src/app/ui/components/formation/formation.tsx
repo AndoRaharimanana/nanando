@@ -1,5 +1,6 @@
 import { PoppinsSemiBold, Lora } from "../../font";
 import Image from "next/image";
+import { useTranslations } from "next-intl";
 import data from "@/app/data/common";
 
 function Item({ data }: any) {
@@ -37,19 +38,20 @@ function Item({ data }: any) {
   );
 }
 export default function Formation() {
+  const t = useTranslations();
   return (
     <div
       className="flex flex-1 items-center justify-center flex-col gap-7 px-14 lg:px-36 py-c75"
       id="formation"
     >
       <div className="flex items-center justify-center flex-col">
-        <span className={`${PoppinsSemiBold.className} text-3xl`}>
-          FORMATION
+        <span className={`${PoppinsSemiBold.className} text-3xl uppercase`}>
+          {t("Formation.title")}
         </span>
       </div>
       <div className="flex justify-between w-full gap-base md:gap-0">
         <div className="flex flex-1 flex-col">
-          <span>Experience</span>
+          <span>{t("Formation.subtitle")}</span>
           <span
             className={`${PoppinsSemiBold.className} text-base md:text-2xl`}
           >
