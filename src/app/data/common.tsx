@@ -346,54 +346,64 @@ const data = {
       },
     ],
   },
-  formation: [
-    {
-      year: "2023",
-      degree: "Master of Science BIHAR - Big data & AI",
-      place: "ESTIA(France) ITuniversity",
-      attach: [
-        {
-          name: "Estia",
-          logo: "/estia.png",
-          link: "https://www.estia.fr/",
-        },
-        {
-          name: "Bihar",
-          logo: "/bihar.png",
-          link: "https://www.estia.fr/formations/formations-longues-diplomantes/msc-bihar",
-        },
-        {
-          name: "ITU",
-          logo: "/itu.png",
-          link: "https://www.ituniversity-mg.com/",
-          color: "#312999",
-        },
-      ],
-    },
-    {
-      year: "2021",
-      degree: "Bachelor's degree in development",
-      place: "ITuniversity",
-      attach: [
-        {
-          name: "ITU",
-          logo: "/itu.png",
-          link: "https://www.ituniversity-mg.com/",
-          color: "#312999",
-        },
-      ],
-    },
-    {
-      year: "2018",
-      degree: "Scientific baccalaureate diploma C",
-      place: "Lycée Saint Antoine",
-    },
-  ],
+  skills: {
+    description:
+      "Solution-oriented developer with solid experience in web and mobile.",
+  },
+  formation: {
+    description:
+      "The 4 years of professional experience were part of my 5-year IT development studies.",
+    items: [
+      {
+        year: "2023",
+        degree: "Master of Science BIHAR - Big data & AI",
+        place: "ESTIA(France) ITuniversity",
+        attach: [
+          {
+            name: "Estia",
+            logo: "/estia.png",
+            link: "https://www.estia.fr/",
+          },
+          {
+            name: "Bihar",
+            logo: "/bihar.png",
+            link: "https://www.estia.fr/formations/formations-longues-diplomantes/msc-bihar",
+          },
+          {
+            name: "ITU",
+            logo: "/itu.png",
+            link: "https://www.ituniversity-mg.com/",
+            color: "#312999",
+          },
+        ],
+      },
+      {
+        year: "2021",
+        degree: "Bachelor's degree in development",
+        place: "ITuniversity",
+        attach: [
+          {
+            name: "ITU",
+            logo: "/itu.png",
+            link: "https://www.ituniversity-mg.com/",
+            color: "#312999",
+          },
+        ],
+      },
+      {
+        year: "2018",
+        degree: "Scientific baccalaureate diploma C",
+        place: "Lycée Saint Antoine",
+      },
+    ],
+  },
   profile: {
     email: "raharimanana99@gmail.com",
     phone: "+261 34 44 077 12",
     fullname: "Ando Raharimanana",
     linkedinLink: "https://www.linkedin.com/in/ando-raharimanana-4917581b1/",
+    post: "",
+    bio: "",
     githubLink: "",
   },
 };

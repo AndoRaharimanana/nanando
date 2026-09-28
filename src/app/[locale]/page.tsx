@@ -1,6 +1,7 @@
 "use client";
 import { config } from "@fortawesome/fontawesome-svg-core";
-import { useTranslations } from "next-intl";
+import { useTranslations, useLocale } from "next-intl";
+import { getData } from "../data";
 import Banner from "../ui/components/banner";
 import {
   Lora,
@@ -20,12 +21,13 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLinkedin, faWhatsapp } from "@fortawesome/free-brands-svg-icons";
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import GitHubCalendar from "react-github-calendar";
-import data from "../data/common";
 
 config.autoAddCss = false;
 
-export default function Home() {
+export default async function Home() {
+  const locale = useLocale();
   const t = useTranslations();
+  const data = getData(locale);
   const [value, setValue] = useState(50);
   const changeData = (value: number) => {
     setValue(value);
@@ -46,7 +48,7 @@ export default function Home() {
               <div
                 className={`rotate-180 ${Lora.className} [writing-mode:vertical-lr] max-h-32 md:max-h-44 z-[2] text-[8px] md:text-xs lg:text-sm`}
               >
-                Fullstack developer Symfony/React Native
+                {data.profile.post}
               </div>
             </div>
             <div className="max-w-24 md:max-w-56 lg:max-w-c348 z-[2]">
@@ -105,21 +107,10 @@ export default function Home() {
               />
             </div>
           </div>
-          <div className={`${Poppins.className} max-w-md text-justify`}>
-            <p>
-              I am a full-stack mobile and web developer with experience in
-              React Native, React, Symfony PHP, and Java. I’m professional,
-              autonomous, and highly motivated, leveraging AI to streamline
-              development and solve problems efficiently.
-            </p>
-            <p>
-              I continuously strive to learn and improve, delivering
-              high-quality solutions across diverse projects. Fluent in French
-              and conversational in English, I am dedicated to pushing
-              boundaries and contributing to the success of your projects
-              through innovative development practices.
-            </p>
-          </div>
+          <div
+            className={`${Poppins.className} max-w-md text-justify`}
+            dangerouslySetInnerHTML={{ __html: data.profile.bio }}
+          />
           <div className="flex items-start justify-center gap-7">
             <a href="/api/download">
               <button

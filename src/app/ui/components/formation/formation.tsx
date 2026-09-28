@@ -1,7 +1,7 @@
 import { PoppinsSemiBold, Lora } from "../../font";
 import Image from "next/image";
-import { useTranslations } from "next-intl";
-import data from "@/app/data/common";
+import { useTranslations, useLocale } from "next-intl";
+import { getData } from "../../../data";
 
 function Item({ data }: any) {
   return (
@@ -38,7 +38,9 @@ function Item({ data }: any) {
   );
 }
 export default function Formation() {
+  const locale = useLocale();
   const t = useTranslations();
+  const data = getData(locale);
   return (
     <div
       className="flex flex-1 items-center justify-center flex-col gap-7 px-14 lg:px-36 py-c75"
@@ -55,12 +57,11 @@ export default function Formation() {
           <span
             className={`${PoppinsSemiBold.className} text-base md:text-2xl`}
           >
-            The 4 years of professional experience were part of my 5-year IT
-            development studies.
+            {data.formation.description}
           </span>
         </div>
         <div className="flex flex-1 flex-col">
-          {data.formation.map((item: any, index: number) => (
+          {data.formation.items.map((item: any, index: number) => (
             <Item key={index} data={item} />
           ))}
         </div>

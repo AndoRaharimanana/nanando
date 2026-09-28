@@ -1,400 +1,93 @@
 const data = {
   freelance: [
     {
-      year: "July 2024 - by now",
-      poste: "Freelance",
-      company: {
-        logo: "/reniala.png",
-        name: "Reniala",
-        place: "Madagascar",
-        link: "https://www.facebook.com/p/Reniala-61561378067836/",
-      },
+      year: "Juillet 2024 - à ce jour",
       projects: [
         {
-          name: "Legal Assist",
-          logo: "/projects/Legal_Assist_Logo.jpg",
-          duration: "3 months",
-          date: "Aug 2025",
-          description: "Website redesign, refont, SEO, and implementation.",
+          duration: "3 mois",
+          date: "Août 2025",
+          description: "Refonte de site web, SEO et mise en production.",
         },
         {
-          name: "Antafondro",
-          logo: "/projects/antafondro.png",
-          duration: "2 months",
-          date: "Jun 2025",
-          description: "Website redesign, refont, SEO, and implementation.",
+          duration: "2 mois",
+          date: "Juin 2025",
+          description: "Refonte de site web, SEO et mise en production.",
         },
         {
-          name: "Floraly Komba",
-          logo: "/projects/Floraly-Komba.jpg",
-          duration: "2 months",
-          date: "Mar 2025",
+          duration: "2 mois",
+          date: "Mars 2025",
           description:
-            "Website redesign, refont, SEO, implementation and production launch.",
+            "Refonte de site web, SEO, intégration et mise en production.",
         },
         {
-          name: "Business Key Agency",
-          logo: "/projects/bk.png",
-          duration: "2 months",
-          date: "Jan 2025",
-          description: "UI/UX design creation and website implementation.",
+          duration: "2 mois",
+          date: "Janvier 2025",
+          description: "Création UI/UX et développement du site web.",
         },
       ],
     },
   ],
   chronologie: [
     {
-      year: "April 2023 - by now",
-      poste: "Remote Fullstack Symfony/React/React Native",
+      year: "Avril 2023 - à ce jour",
       company: {
-        logo: "/ifoxcode.png",
-        name: "Ifoxcode via BICI",
-        place: "Mauritius",
-        link: "https://ifoxcode.com/",
+        place: "Maurice",
       },
       description:
-        "I spent 3 years as a full-stack mobile developer at iFoxCode (Mauritius), working remotely. My role involved building Android and iOS mobile apps using React Native, developing backend APIs with Symfony, and redesigning and creating web applications with React. My experience there allowed me to contribute to diverse projects, handling both frontend and backend tasks to deliver complete solutions on several projects.",
-      projects: [
-        {
-          name: "AlphaPest Management",
-          logo: "/projects/alphapest.png",
-        },
-        {
-          name: "Burger King - Chatbot",
-          logo: "/projects/Burger-King.png",
-        },
-        {
-          name: "IfoxCode News",
-          logo: "/projects/ifoxcode.jpg",
-        },
-        {
-          name: "Luxury Avenue",
-          logo: "/projects/luxury-avenue.png",
-        },
-        {
-          name: "MaxCity",
-          logo: "/projects/maxcity.png",
-        },
-        {
-          name: "RSE Datanews",
-          logo: "/projects/rdn.png",
-        },
-        {
-          name: "Terminal Management System",
-          logo: "/projects/tms.png",
-        },
-        {
-          name: "BussinessLink",
-          logo: "/projects/businesslink.svg",
-        },
-        {
-          name: "Digital Marketing",
-          logo: "/projects/digitalmarketing.svg",
-        },
-        {
-          name: "Kaktus",
-          logo: "/projects/kaktus.png",
-        },
-        {
-          name: "Sesame",
-          logo: "/projects/sesame.png",
-        },
-        {
-          name: "Mothair",
-          logo: "/projects/mothair.png",
-        },
-      ],
+        "J'ai travaillé pendant 3 ans en tant que développeur mobile full-stack chez iFoxCode (Maurice), en télétravail. Mon rôle consistait à développer des applications mobiles Android et iOS avec React Native, des API backend avec Symfony, ainsi qu'à concevoir et développer des applications web avec React. Cette expérience m'a permis de contribuer à divers projets, en intervenant aussi bien sur le frontend que sur le backend afin de fournir des solutions complètes.",
     },
     {
-      year: "December 2021 - by now",
-      poste: "JAVA Developer",
-      company: {
-        logo: "/bici.png",
-        name: "BICI",
-        place: "Madagascar",
-        link: "https://bici.mg/",
-      },
+      year: "Décembre 2021 - à ce jour",
+      poste: "Développeur JAVA",
       description:
-        "I spent 4 years as a Java developer at BICI, working on-site. My responsibilities included debugging and fixing issues for web applications, developing backend solutions, and reporting customer feedback. I also proposed solutions based on this feedback and trained customers on how to effectively use the applications. This experience sharpened my problem-solving skills and deepened my expertise in backend development.",
-      projects: [
-        {
-          name: "Agence de transport terrestres (ATT)",
-          logo: "/projects/att.jpg",
-        },
-        {
-          name: "La Société du Port à gestion Autonome de Toamasina (S.P.A.T)",
-          logo: "/projects/spat.png",
-        },
-        {
-          name: "Pho Resto",
-          logo: "/projects/pho.jpg",
-        },
-        {
-          name: "Fonds Routier Madagascar",
-          logo: "/projects/fer.png",
-        },
-        {
-          name: "Team Task",
-        },
-      ],
+        "J'ai travaillé pendant 4 ans en tant que développeur Java chez BICI, sur site. Mes responsabilités comprenaient le débogage et la correction de problèmes sur des applications web, le développement de solutions backend et la remontée des retours clients. Je proposais également des solutions adaptées à ces retours et formais les clients à l'utilisation efficace des applications. Cette expérience a renforcé mes compétences en résolution de problèmes et approfondi mon expertise en développement backend.",
     },
     {
-      year: "July 2023 - October 2023",
-      poste: "Intern Blockchain Developer",
-      company: {
-        logo: "/bici.png",
-        name: "BICI",
-        place: "Madagascar",
-        link: "https://bici.mg/",
-      },
+      year: "Juillet 2023 - Octobre 2023",
+      poste: "Stagiaire Développeur Blockchain",
       description:
-        "During my 3-month internship at BICI as a Blockchain Developer, I worked on creating a cryptocurrency using blockchain technology. My responsibilities included developing a website and wallet integrated with MetaMask, ensuring smooth transaction processes, and building functionalities for minting currency. This experience enhanced my understanding of blockchain applications and cryptocurrency development.",
-      projects: [
-        {
-          name: "Madacoin",
-        },
-      ],
+        "Lors de mon stage de 3 mois chez BICI en tant que développeur Blockchain, j'ai travaillé sur la création d'une cryptomonnaie basée sur la technologie blockchain. Mes responsabilités comprenaient le développement d'un site web et d'un portefeuille intégré à MetaMask, la gestion des transactions et la création de fonctionnalités de minting. Cette expérience a renforcé ma compréhension des applications blockchain et du développement de cryptomonnaies.",
     },
     {
-      year: "December 2021 - March 2023",
+      year: "Décembre 2021 - Mars 2023",
       poste: "Remote Webmaster",
       company: {
-        logo: "/rapp.jpg",
-        name: "RAPP via BICI",
-        place: "Mauritius",
-        link: "https://www.rapp.com/",
+        place: "Maurice",
       },
       description:
-        "At RAPP Mauritius, I worked remotely as a Webmaster for over a year. My role involved managing the content of Mercedes-Benz websites across multiple countries (France, UK, Japan, Argentina, Switzerland, and others). I was responsible for troubleshooting, proposing solutions for bugs, and assisting customers with updates. This experience honed my ability to manage content at scale and provide effective client support.",
-      projects: [
-        {
-          name: "Mercedes-Benz OneWeb",
-          logo: "/projects/mercedes.png",
-        },
-      ],
+        "Chez RAPP Mauritius, j'ai travaillé à distance en tant que Webmaster pendant plus d'un an. Mon rôle consistait à gérer le contenu des sites Mercedes-Benz dans plusieurs pays (France, Royaume-Uni, Japon, Argentine, Suisse, etc.). J'étais également chargé de résoudre les problèmes, de proposer des solutions aux bugs et d'accompagner les clients dans leurs mises à jour. Cette expérience a renforcé ma capacité à gérer du contenu à grande échelle et à assurer un support client efficace.",
     },
     {
-      year: "August 2021 - November 2021",
-      poste: "Intern JAVA Developer",
-      company: {
-        logo: "/bici.png",
-        name: "BICI",
-        place: "Madagascar",
-        link: "https://bici.mg/",
-      },
+      year: "Août 2021 - Novembre 2021",
+      poste: "Stagiaire Développeur JAVA",
       description:
-        "During my 3-month internship at BICI, I worked on-site as a Java Developer. My responsibilities included debugging and fixing issues for web applications, proposing and developing new functionalities for the internal team task management system. This experience helped me enhance my problem-solving skills and contribute to team projects with innovative solutions.",
-      projects: [
-        {
-          name: "La Société du Port à gestion Autonome de Toamasina (S.P.A.T)",
-          logo: "/projects/spat.png",
-        },
-        {
-          name: "Fonds Routier Madagascar",
-          logo: "/projects/fer.png",
-        },
-        {
-          name: "Team Task",
-        },
-      ],
+        "Lors de mon stage de 3 mois chez BICI, j'ai travaillé sur site en tant que développeur Java. Mes responsabilités comprenaient le débogage et la correction de problèmes sur des applications web, ainsi que la conception et le développement de nouvelles fonctionnalités pour le système interne de gestion des tâches de l'équipe. Cette expérience m'a permis de renforcer mes compétences en résolution de problèmes et de contribuer aux projets de l'équipe avec des solutions innovantes.",
     },
   ],
-  backEndData: [
-    {
-      name: "Php",
-      value: 90,
-    },
-    {
-      name: "Java",
-      value: 80,
-    },
-    {
-      name: "C#",
-      value: 60,
-    },
-    {
-      name: "SQL",
-      value: 80,
-    },
-    {
-      name: "NoSQL",
-      value: 60,
-    },
-    {
-      name: "Symfony",
-      value: 90,
-    },
-    {
-      name: "Ethereum",
-      value: 75,
-    },
-    {
-      name: "NodeJS",
-      value: 75,
-    },
-  ],
-  frontEndData: [
-    {
-      name: "HTML/CSS",
-      value: 95,
-    },
-    {
-      name: "JavaScript",
-      value: 90,
-    },
-    {
-      name: "React",
-      value: 89,
-    },
-    {
-      name: "React Native",
-      value: 90,
-    },
-    {
-      name: "Tailwind",
-      value: 75,
-    },
-    {
-      name: "Sass",
-      value: 85,
-    },
-    {
-      name: "JQuery",
-      value: 80,
-    },
-  ],
-  additionalSkillsData: {
-    withPhoto: [
+  skills: {
+    description:
+      "Développeur orienté solutions, avec une solide expérience dans le développement web et mobile.",
+  },
+  formation: {
+    description:
+      "Mes 4 années d'expérience professionnelle ont été réalisées en parallèle de mes 5 années d'études en développement informatique.",
+    items: [
       {
-        name: "Visual Code",
-        logo: "/skills/visualcode.png",
+        year: "2023",
       },
       {
-        name: "Expo",
-        logo: "/skills/expo.png",
+        year: "2021",
+        degree: "Licence en développement informatique",
       },
       {
-        name: "Github",
-        logo: "/skills/github.png",
-      },
-      {
-        name: "Docker",
-        logo: "/skills/docker.png",
-      },
-      {
-        name: "Firebase",
-        logo: "/skills/firebase.png",
-      },
-      {
-        name: "Postman",
-        logo: "/skills/postman.png",
-      },
-      {
-        name: "MySQL",
-        logo: "/skills/mysql.png",
-      },
-      {
-        name: "Postgresql",
-        logo: "/skills/postgresql.png",
-      },
-      {
-        name: "MongoDB",
-        logo: "/skills/mongodb.png",
-      },
-      {
-        name: "NextJS",
-        logo: "/skills/nextjs.png",
-      },
-      {
-        name: "Wordpress",
-        logo: "/skills/wordpress.png",
-      },
-    ],
-    noPhoto: [
-      {
-        name: "JWT/Basic/Token Auth",
-      },
-      {
-        name: "RESTful APIs",
-      },
-      {
-        name: "JSON APIs",
-      },
-      {
-        name: "ORMs",
-      },
-      {
-        name: "Microservices",
-      },
-      {
-        name: "Responsive Design",
-      },
-      {
-        name: "DOM Manipulation",
-      },
-      {
-        name: "Fecth API/Ajax",
-      },
-      {
-        name: "Package Managers(npm)",
-      },
-      {
-        name: "TypeScript",
-      },
-      {
-        name: "Blockchain",
+        year: "2018",
+        degree: "Baccalauréat scientifique série C",
       },
     ],
   },
-  formation: [
-    {
-      year: "2023",
-      degree: "Master of Science BIHAR - Big data & AI",
-      place: "ESTIA(France) ITuniversity",
-      attach: [
-        {
-          name: "Estia",
-          logo: "/estia.png",
-          link: "https://www.estia.fr/",
-        },
-        {
-          name: "Bihar",
-          logo: "/bihar.png",
-          link: "https://www.estia.fr/formations/formations-longues-diplomantes/msc-bihar",
-        },
-        {
-          name: "ITU",
-          logo: "/itu.png",
-          link: "https://www.ituniversity-mg.com/",
-          color: "#312999",
-        },
-      ],
-    },
-    {
-      year: "2021",
-      degree: "Bachelor's degree in development",
-      place: "ITuniversity",
-      attach: [
-        {
-          name: "ITU",
-          logo: "/itu.png",
-          link: "https://www.ituniversity-mg.com/",
-          color: "#312999",
-        },
-      ],
-    },
-    {
-      year: "2018",
-      degree: "Scientific baccalaureate diploma C",
-      place: "Lycée Saint Antoine",
-    },
-  ],
   profile: {
-    email: "raharimanana99@gmail.com",
-    phone: "+261 34 44 077 12",
-    fullname: "Ando Raharimanana",
-    linkedinLink: "https://www.linkedin.com/in/ando-raharimanana-4917581b1/",
-    githubLink: "",
+    post: "Développeur Fullstack Symfony/React Native",
+    bio: "<p>Je suis développeur full-stack mobile et web, avec une expérience en React Native, React, Symfony PHP et Java. Professionnel, autonome et très motivé, j'utilise l'IA pour optimiser mon développement et résoudre efficacement les problèmes.</p><p>Je cherche constamment à apprendre et à progresser afin de fournir des solutions de qualité sur des projets variés. Courant en français et avec un niveau conversationnel en anglais, je suis déterminé à repousser les limites et à contribuer au succès de vos projets grâce à des pratiques de développement innovantes.</p>",
   },
 };
 

@@ -1,8 +1,8 @@
 import { PoppinsBold, PoppinsSemiBold } from "../../font";
 import { Slider } from "rsuite";
 import Image from "next/image";
-import { useTranslations } from "next-intl";
-import data from "@/app/data/common";
+import { useTranslations, useLocale } from "next-intl";
+import { getData } from "../../../data";
 
 type ProgressProps = {
   value: number;
@@ -100,7 +100,9 @@ function Item({ name, value, side, data }: ItemProps) {
   );
 }
 export default function CustomSlider({ value, changeData }: CustomSliderProps) {
+  const locale = useLocale();
   const t = useTranslations();
+  const data = getData(locale);
   return (
     <div
       className="flex flex-1 items-center justify-start md:justify-center flex-col gap-7 mx-14 lg:mx-36 min-h-[650px] md:min-h-fit py-c75"
@@ -110,9 +112,7 @@ export default function CustomSlider({ value, changeData }: CustomSliderProps) {
         <span className={`${PoppinsSemiBold.className} text-3xl`}>
           {t("Skills.title")}
         </span>
-        <span className="text-center">
-          Solution-oriented developer with solid experience in web and mobile.
-        </span>
+        <span className="text-center">{data.skills.description}</span>
         <span
           className={`${PoppinsBold.className} text-7xl absolute text-nanando-soft-grey z-[-1]`}
         >
