@@ -78,7 +78,7 @@ function Menu({ displayMobileMenu, setDisplayMobileMenu }: MenuProps) {
           {t("Navigation.contact")}
         </a>
       </li>
-      <li className="rotate-180">
+      <li className="lg:rotate-180">
         <LanguageSwitcher />
       </li>
     </>
