@@ -2,6 +2,7 @@
   "Navigation": {
     "home": "Home",
     "about": "About",
+    "portfolio": "Portfolio",
     "experience": "Experience",
     "formation": "Formation",
     "skills": "Skills",
@@ -10,6 +11,16 @@
   "About": {
     "title": "About me",
     "subtitle": "Who am i"
+  },
+  "Portfolio": {
+    "title": "Portfolio",
+    "subtitle": "My projects",
+    "more": "More about it",
+    "next": "Next",
+    "prev": "Prev",
+    "projects": "Projects",
+    "fullscreen": "View full screen",
+    "close": "Close"
   },
   "Experience": {
     "title": "Experiences"

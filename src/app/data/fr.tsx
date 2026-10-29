@@ -85,6 +85,42 @@ const data = {
       },
     ],
   },
+  portfolio: [
+    {
+      title: "Planifiez votre prochain voyage.",
+      excerpt: "Une preuve de concept autour des cartes interactives et des itinéraires.",
+      description:
+        "Description provisoire. Expliquez le problème que résout ce projet, l'approche choisie et ce que vous avez appris en le réalisant.",
+    },
+    {
+      type: "MVP",
+      title: "Suivez ce qui compte.",
+      excerpt: "Un produit minimum viable pour suivre ses habitudes et objectifs.",
+      description:
+        "Description provisoire. Expliquez le problème que résout ce projet, l'approche choisie et ce que vous avez appris en le réalisant.",
+    },
+    {
+      type: "Projet perso",
+      title: "Gardez vos idées en ordre.",
+      excerpt: "Un projet personnel pour organiser notes et idées au même endroit.",
+      description:
+        "Description provisoire. Expliquez le problème que résout ce projet, l'approche choisie et ce que vous avez appris en le réalisant.",
+    },
+    {
+      type: "MVP",
+      title: "Travaillez de n'importe où.",
+      excerpt: "Un MVP qui met en relation travailleurs à distance et espaces de coworking.",
+      description:
+        "Description provisoire. Expliquez le problème que résout ce projet, l'approche choisie et ce que vous avez appris en le réalisant.",
+    },
+    {
+      type: "POC",
+      title: "Éclairez vos données.",
+      excerpt: "Une preuve de concept utilisant l'IA pour résumer et visualiser des données.",
+      description:
+        "Description provisoire. Expliquez le problème que résout ce projet, l'approche choisie et ce que vous avez appris en le réalisant.",
+    },
+  ],
   profile: {
     post: "Développeur Fullstack Symfony/React Native",
     bio: "<p>Je suis développeur full-stack mobile et web, avec une expérience en React Native, React, Symfony PHP et Java. Professionnel, autonome et très motivé, j'utilise l'IA pour optimiser mon développement et résoudre efficacement les problèmes.</p><p>Je cherche constamment à apprendre et à progresser afin de fournir des solutions de qualité sur des projets variés. Courant en français et avec un niveau conversationnel en anglais, je suis déterminé à repousser les limites et à contribuer au succès de vos projets grâce à des pratiques de développement innovantes.</p>",

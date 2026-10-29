@@ -397,6 +397,65 @@ const data = {
       },
     ],
   },
+  // Placeholder projects: replace name, image, link and tags with real ones.
+  // Translated texts (type, title, excerpt, description) live in en.tsx / fr.tsx.
+  portfolio: [
+    {
+      name: "Atlas",
+      type: "POC",
+      image:
+        "https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=1200&q=80",
+      link: "https://example.com",
+      tags: ["Next.js", "Tailwind"],
+      title: "",
+      excerpt: "",
+      description: "",
+    },
+    {
+      name: "Pulse",
+      type: "MVP",
+      image:
+        "https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=1200&q=80",
+      link: "https://example.com",
+      tags: ["React Native", "Symfony"],
+      title: "",
+      excerpt: "",
+      description: "",
+    },
+    {
+      name: "Harbor",
+      type: "Side project",
+      image:
+        "https://images.unsplash.com/photo-1501785888041-af3ef285b470?w=1200&q=80",
+      link: "https://example.com",
+      tags: ["React", "Node.js"],
+      title: "",
+      excerpt: "",
+      description: "",
+    },
+    {
+      name: "Nomad",
+      type: "MVP",
+      image:
+        "https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?w=1200&q=80",
+      link: "https://example.com",
+      tags: ["Java", "Spring"],
+      title: "",
+      excerpt: "",
+      description: "",
+    },
+    {
+      name: "Lumen",
+      type: "POC",
+      image:
+        "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=1200&q=80",
+      link: "https://example.com",
+      tags: ["AI", "Python"],
+      title: "",
+      excerpt: "",
+      description: "",
+    },
+  ],
   profile: {
     email: "raharimanana99@gmail.com",
     phone: "+261 34 44 077 12",

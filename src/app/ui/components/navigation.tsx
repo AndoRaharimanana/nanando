@@ -46,6 +46,15 @@ function Menu({ displayMobileMenu, setDisplayMobileMenu }: MenuProps) {
         <a
           onClick={() => clickMobileMenu()}
           className="hover:text-reniala-red active:text-reniala-red hover:decoration-solid transition duration-300"
+          href="#portfolio"
+        >
+          {t("Navigation.portfolio")}
+        </a>
+      </li>
+      <li>
+        <a
+          onClick={() => clickMobileMenu()}
+          className="hover:text-reniala-red active:text-reniala-red hover:decoration-solid transition duration-300"
           href="#experience"
         >
           {t("Navigation.experience")}

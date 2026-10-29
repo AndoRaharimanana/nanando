@@ -85,6 +85,42 @@ const data = {
       },
     ],
   },
+  portfolio: [
+    {
+      title: "Map your next journey.",
+      excerpt: "A proof of concept exploring interactive maps and route planning.",
+      description:
+        "Placeholder description. Explain the problem this project solves, the approach you took and what you learned building it.",
+    },
+    {
+      type: "MVP",
+      title: "Keep track of what matters.",
+      excerpt: "A minimum viable product to monitor daily habits and goals.",
+      description:
+        "Placeholder description. Explain the problem this project solves, the approach you took and what you learned building it.",
+    },
+    {
+      type: "Side project",
+      title: "Keep your soul neat and tidy.",
+      excerpt: "A personal side project to organise notes and ideas in one place.",
+      description:
+        "Placeholder description. Explain the problem this project solves, the approach you took and what you learned building it.",
+    },
+    {
+      type: "MVP",
+      title: "Work from anywhere.",
+      excerpt: "An MVP connecting remote workers with coworking spaces.",
+      description:
+        "Placeholder description. Explain the problem this project solves, the approach you took and what you learned building it.",
+    },
+    {
+      type: "POC",
+      title: "Shed light on your data.",
+      excerpt: "A proof of concept using AI to summarise and visualise data.",
+      description:
+        "Placeholder description. Explain the problem this project solves, the approach you took and what you learned building it.",
+    },
+  ],
   profile: {
     post: "Fullstack developer Symfony/React Native",
     bio: "<p>I am a full-stack mobile and web developer with experience in React Native, React, Symfony PHP, and Java. I’m professional, autonomous, and highly motivated, leveraging AI to streamline development and solve problems efficiently.</p><p>I continuously strive to learn and improve, delivering high-quality solutions across diverse projects. Fluent in French and conversational in English, I am dedicated to pushing boundaries and contributing to the success of your projects through innovative development practices.</p>",

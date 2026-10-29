@@ -16,6 +16,7 @@ import Image from "next/image";
 import Chronologie from "../ui/components/chronologie/chronologie";
 import Formation from "../ui/components/formation/formation";
 import CustomSlider from "../ui/components/customSlider/customSlider";
+import Portfolio from "../ui/components/portfolio/portfolio";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLinkedin, faWhatsapp } from "@fortawesome/free-brands-svg-icons";
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
@@ -126,6 +127,7 @@ export default function Home() {
           </div>
         </div>
       </div>
+      <Portfolio />
       <Chronologie />
       <Formation />
       <CustomSlider />

@@ -23,6 +23,15 @@ const config: Config = {
         "reniala-red-dark": "#B32922",
         "transparent": "transparent",
       },
+      keyframes: {
+        fadeIn: {
+          from: { opacity: "0", transform: "translateY(8px)" },
+          to: { opacity: "1", transform: "translateY(0)" },
+        },
+      },
+      animation: {
+        "fade-in": "fadeIn 0.6s ease-in-out",
+      },
       spacing:{
         "c348": "348px",
         "c75": "75px",
