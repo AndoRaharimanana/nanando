@@ -17,6 +17,7 @@ import Chronologie from "../ui/components/chronologie/chronologie";
 import Formation from "../ui/components/formation/formation";
 import CustomSlider from "../ui/components/customSlider/customSlider";
 import Portfolio from "../ui/components/portfolio/portfolio";
+import Proposal from "../ui/components/proposal/proposal";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLinkedin, faWhatsapp } from "@fortawesome/free-brands-svg-icons";
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
@@ -177,6 +178,7 @@ export default function Home() {
           />
         </div>
       </div>
+      <Proposal />
       <div
         className="flex flex-1 items-center justify-center flex-col gap-7 px-14 lg:px-36 py-c75"
         id="contact"

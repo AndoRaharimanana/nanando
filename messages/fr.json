@@ -6,6 +6,7 @@
     "experience": "Expérience",
     "formation": "Formation",
     "skills": "Compétences",
+    "proposal": "Collaborer",
     "contact": "Parlons-en"
   },
   "About": {
@@ -33,6 +34,98 @@
     "title": "Mes compétences",
     "subtitle": "Compétences",
     "more": "Compétences supplémentaires"
+  },
+  "Proposal": {
+    "title": "Travaillons ensemble",
+    "subtitle": "Proposition de mission / projet",
+    "intro": "Vous avez une offre d'emploi, une mission freelance ou un projet en tête ? Parlez-m'en : plus vous partagez de détails, plus je pourrai vous répondre rapidement et clairement. Je réponds généralement sous 48 heures.",
+    "aboutYou": "Vous",
+    "name": "Nom",
+    "company": "Nom de l'entreprise",
+    "role": "Rôle",
+    "rolePlaceholder": "CTO, RH, Chef de projet...",
+    "email": "Email",
+    "contact": "Contact",
+    "contactPlaceholder": "Téléphone, WhatsApp, LinkedIn...",
+    "typeLabel": "Type de proposition",
+    "types": {
+      "job": "Emploi",
+      "freelance": "Freelance / Mission",
+      "project": "Projet",
+      "others": "Autres"
+    },
+    "subject": "Objet",
+    "subjectDefaults": {
+      "job": "Offre d'emploi - ",
+      "freelance": "Opportunité freelance/mission - ",
+      "project": "Idée de projet - "
+    },
+    "description": {
+      "job": "Description du poste",
+      "freelance": "Description de la mission",
+      "project": "Description du projet",
+      "others": "Description de votre proposition"
+    },
+    "descriptionPlaceholder": {
+      "job": "Rôle, équipe, responsabilités, compétences requises...",
+      "freelance": "Contexte, objectifs, tâches à réaliser...",
+      "project": "Idée, utilisateurs cibles, fonctionnalités principales...",
+      "others": "Contexte, objectifs, ce que vous avez en tête..."
+    },
+    "position": "Intitulé du poste",
+    "applicationDeadline": "Date de fin de candidature",
+    "offerLink": "Lien de l'offre d'emploi",
+    "postLink": "Lien de l'annonce freelance/mission",
+    "linkPlaceholder": "https://...",
+    "contractType": "Type de contrat",
+    "contracts": {
+      "CDI": "CDI",
+      "CDD": "CDD"
+    },
+    "startDate": "Date de début",
+    "endDate": "Date de fin",
+    "salary": "Salaire net par mois",
+    "currency": "Devise",
+    "otherCurrency": "Autre...",
+    "customCurrencyPlaceholder": "ex. CAD",
+    "remote": "Télétravail possible",
+    "remoteDays": "Jours de télétravail par semaine",
+    "hoursPerWeek": "Heures par semaine",
+    "location": "Lieu du bureau",
+    "techStack": "Stack technique",
+    "techStackPlaceholder": "React, Symfony, React Native...",
+    "duration": "Durée",
+    "durationPlaceholder": "ex. 3 mois",
+    "hourlyRate": "Tarif horaire",
+    "workMode": "Mode de travail",
+    "workModes": {
+      "remote": "À distance",
+      "onsite": "Sur site",
+      "hybrid": "Hybride"
+    },
+    "deliverable": "Livrable",
+    "production": "Production",
+    "platform": "Plateforme",
+    "platforms": {
+      "web": "Web",
+      "mobile": "Mobile",
+      "both": "Web + Mobile"
+    },
+    "projectState": "État du projet",
+    "projectStates": {
+      "new": "Nouveau projet",
+      "existing": "Projet existant"
+    },
+    "budget": "Budget",
+    "expectedDuration": "Durée estimée",
+    "optional": "optionnel",
+    "other": "Autres",
+    "links": "Liens",
+    "linksPlaceholder": "Cahier des charges, maquettes, site...",
+    "submit": "Envoyer ma proposition",
+    "sending": "Envoi...",
+    "success": "Merci ! Votre proposition a bien été envoyée, je reviens vers vous rapidement.",
+    "error": "Une erreur est survenue, veuillez réessayer ou me contacter par email."
   },
   "Contact": {
     "title": "Contactez-moi"

@@ -6,6 +6,7 @@
     "experience": "Experience",
     "formation": "Formation",
     "skills": "Skills",
+    "proposal": "Work with me",
     "contact": "Let's talk"
   },
   "About": {
@@ -33,6 +34,98 @@
     "title": "My skills",
     "subtitle": "Skills",
     "more": "Additional skills"
+  },
+  "Proposal": {
+    "title": "Work with me",
+    "subtitle": "Mission / Project proposal",
+    "intro": "Have a job offer, a freelance mission or a project in mind? Tell me about it: the more details you share, the faster I can give you a clear answer. I usually reply within 48 hours.",
+    "aboutYou": "About you",
+    "name": "Name",
+    "company": "Company name",
+    "role": "Role",
+    "rolePlaceholder": "CTO, HR, Project manager...",
+    "email": "Email",
+    "contact": "Contact",
+    "contactPlaceholder": "Phone, WhatsApp, LinkedIn...",
+    "typeLabel": "Type of proposition",
+    "types": {
+      "job": "Job",
+      "freelance": "Freelance / Mission",
+      "project": "Project",
+      "others": "Others"
+    },
+    "subject": "Subject",
+    "subjectDefaults": {
+      "job": "Job offer - ",
+      "freelance": "Freelance/Mission opportunity - ",
+      "project": "Project idea - "
+    },
+    "description": {
+      "job": "Description of the job",
+      "freelance": "Description of the mission",
+      "project": "Description of the project",
+      "others": "Description of your proposition"
+    },
+    "descriptionPlaceholder": {
+      "job": "Role, team, responsibilities, required skills...",
+      "freelance": "Context, goals, tasks to do...",
+      "project": "Idea, target users, main features...",
+      "others": "Context, goals, what you have in mind..."
+    },
+    "position": "Job position name",
+    "applicationDeadline": "Ending of candidature date",
+    "offerLink": "Job offer link",
+    "postLink": "Freelance/Mission post link",
+    "linkPlaceholder": "https://...",
+    "contractType": "Type of contract",
+    "contracts": {
+      "CDI": "CDI (permanent)",
+      "CDD": "CDD (fixed-term)"
+    },
+    "startDate": "Starting date",
+    "endDate": "Ending date",
+    "salary": "Net salary per month",
+    "currency": "Currency",
+    "otherCurrency": "Other...",
+    "customCurrencyPlaceholder": "e.g. CAD",
+    "remote": "Possibility of remote work",
+    "remoteDays": "Remote days per week",
+    "hoursPerWeek": "Hours per week",
+    "location": "Office location",
+    "techStack": "Tech stack",
+    "techStackPlaceholder": "React, Symfony, React Native...",
+    "duration": "Duration",
+    "durationPlaceholder": "e.g. 3 months",
+    "hourlyRate": "Price per hour",
+    "workMode": "Work mode",
+    "workModes": {
+      "remote": "Remote",
+      "onsite": "On site",
+      "hybrid": "Hybrid"
+    },
+    "deliverable": "Deliverable",
+    "production": "Production",
+    "platform": "Platform",
+    "platforms": {
+      "web": "Web",
+      "mobile": "Mobile",
+      "both": "Web + Mobile"
+    },
+    "projectState": "Project state",
+    "projectStates": {
+      "new": "New project",
+      "existing": "Existing project"
+    },
+    "budget": "Budget",
+    "expectedDuration": "Expected duration",
+    "optional": "optional",
+    "other": "Others",
+    "links": "Links",
+    "linksPlaceholder": "Specs, designs, website...",
+    "submit": "Send my proposal",
+    "sending": "Sending...",
+    "success": "Thank you! Your proposal has been sent, I'll get back to you soon.",
+    "error": "Something went wrong, please try again or contact me by email."
   },
   "Contact": {
     "title": "Contact me"
