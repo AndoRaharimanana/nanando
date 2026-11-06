@@ -107,7 +107,7 @@ export default function Home() {
             dangerouslySetInnerHTML={{ __html: data.profile.bio }}
           />
           <div className="flex items-start justify-center gap-7">
-            <a href="/api/download">
+            <a href={`/api/download?locale=${locale}`}>
               <button
                 type="button"
                 className={`${PoppinsSemiBold.className} inline-block rounded px-4 lg:px-6 py-4 text-xs uppercase text-white bg-reniala-red hover:-translate-y-1 hover:bg-reniala-red-dark transition ease-in-out delay-150 duration-300`}

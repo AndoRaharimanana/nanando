@@ -2,9 +2,15 @@ import { NextResponse } from 'next/server';
 import fs from 'fs/promises';
 import path from 'path';
 
+const cvFiles: Record<string, string> = {
+  en: 'Ando-Raharimanana.pdf',
+  fr: 'Ando-Raharimanana-CV.pdf',
+};
+
 export async function GET(request: Request) {
-  const filePath = path.join(process.cwd(), 'public', 'cv/Ando-Raharimanana-CV.pdf');
-  const fileName = 'Ando-Raharimanana-CV.pdf';
+  const locale = new URL(request.url).searchParams.get('locale') ?? 'en';
+  const fileName = cvFiles[locale] ?? cvFiles.en;
+  const filePath = path.join(process.cwd(), 'public', 'cv', fileName);
 
   // Check if the file exists
   try {
